@@ -1572,6 +1572,7 @@ height: 70px;
   .verve_stats_hp img{
 	padding: .5px;
 	height: 100%;
+	width: auto;
 	filter: none;
   }
   .verve_stats_atk span,
