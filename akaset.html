@@ -11,19 +11,19 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/img/favicon/site.webmanifest">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+		integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+		crossorigin="anonymous" />
+	<link rel="stylesheet" href="/lib/js/gallery/css/lightgallery.css">
+	<link rel="stylesheet" href="/lib/js/gallery/css/lg-thumbnail.css">
+	<link rel="stylesheet" href="/lib/js/gallery/css/lg-transitions.css">
+	<link rel="stylesheet" href="/lib/js/gallery/css/lg-zoom.css">
+	<link rel="stylesheet" href="/lib/js/gallery/css/lg-fullscreen.css">
 	<script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/pixi.js@5.3.6/dist/pixi.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/index.min.js"></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-	<script src="/lib/js/shuffle-text.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-		integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-		crossorigin="anonymous" />
-	<link rel='stylesheet' href='https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css'>
-	<link rel='stylesheet' href='/lib/js/gallery/css/lg-transitions.min.css'>
-	<link rel='stylesheet' href='/lib/js/gallery/css/lightgallery.min.css'>
-	<link rel='stylesheet' href='/lib/js/gallery/css/lg-fb-comment-box.min.css'>
 </head>
 
 <body>
@@ -1026,7 +1026,7 @@
 											<div class="info">
 												<div class="info_metrika">
 													<div class="dollheight">Рост: <span>129,53 См</span></div>
-													<div class="dollweight">Вес: <span>126 Кг</span></div>
+													<div class="dollweight">Вес: <span>26 Кг</span></div>
 													<div class="dollva">Сэйю: <span>Yui Ogura</span></div>
 													<hr>
 													<div class="dollbirthday">День рождения: <span>08 июня</span></div>
@@ -1117,7 +1117,7 @@
 															</a>
 														</div>
 													</div>
-												</div>												
+												</div>
 												<div class="dollcg_wrapper">
 													<div class="dollcg">
 														<div id="dollskinlist">
@@ -1243,20 +1243,25 @@
 	<script src="/lib/js/select.js"></script>
 	<script src="/lib/js/modal_video.js"></script>
 	<script src="/lib/js/verves.js"></script>
-	<script src='https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js'></script>
-	<script src='https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js'></script>
-	<script src='https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js'></script>
-	<script src="/lib/js/gallery/lg-thumbnail.min.js"></script>
-	<script>
-		lightGallery(document.getElementById('dollcglist'), {
+	<script src="/lib/js/gallery/lightgallery.min.js"></script>
+	<script src="/lib/js/gallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+	<script src="/lib/js/gallery/plugins/zoom/lg-zoom.min.js"></script>
+	<script src="/lib/js/gallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+	<script type="text/javascript">
+		lightGallery(document.getElementById('dollcglist', 'dollskinlist'), {
 			mode: 'lg-lollipop-rev',
-			thumbnail: true,
+			plugins: [lgZoom, lgThumbnail, lgFullscreen],
+			speed: 500,
 		});
-
-
-
-
 	</script>
+	<script type="text/javascript">
+		lightGallery(document.getElementById('dollskinlist'), {
+			mode: 'lg-lollipop-rev',
+			plugins: [lgZoom, lgThumbnail, lgFullscreen],
+			speed: 500,
+		});
+	</script>
+
 
 </body>
 
