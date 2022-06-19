@@ -1810,22 +1810,36 @@ height: 70px;
 	height: fit-content;
 	background-color: rgb(59, 69, 105);
 	border-radius: 12px;
+	margin-bottom: 10px;
 }
-.dollcg{
-	width: 100%;
-	display: flex;
-	flex-flow: rowwrap;
-	justify-content: center;
-}
+
 .dollcg img{
-	max-width: 150px;
-	padding: 10px;
+	max-width: 140px;
+	height: 115px;
 	border-radius: 18px;
+	padding: 5px;
+	transition: all .4s;
 }
 #dollcglist,
 #dollskinlist{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 10px 0;
 	width: 100%;
 	list-style: none;
+}
+.dollcg img:hover{
+	transform: scale(1.1);
+	transition: all .4s;
+}
+.dollcg_name{
+	width: 100%;
+	text-align: center;
+	color: #cbd5e0;
+	font-family: eras;
+	font-size: 20px;
+	padding-top: 5px;
 }
 
 /*tierlist*/
