@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Akaset</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/img/favicon/site.webmanifest">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+		integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+		crossorigin="anonymous" />
+	<link rel="stylesheet" href="/lib/js/gallery/css/lightgallery.css">
+	<link rel="stylesheet" href="/lib/js/gallery/css/lg-thumbnail.css">
+	<link rel="stylesheet" href="/lib/js/gallery/css/lg-transitions.css">
+	<link rel="stylesheet" href="/lib/js/gallery/css/lg-zoom.css">
+	<link rel="stylesheet" href="/lib/js/gallery/css/lg-fullscreen.css">
+	<script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/pixi.js@5.3.6/dist/pixi.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/index.min.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="header_wrapper">
+			<div class="header">
+				<div class="header_navwrap">
+					<div class="header_navbar">
+						<a href="/" class="header_navitem">Куклы</a>
+						<a href="/tierlist.html" class="header_navitem separator">Тир-лист</a>
+						<a href="" class="header_navitem separator">Полезное</a>
+					</div>
+					<div class="header_logo">
+						<a href="">
+							<img src="/img/logo_custom3.png" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper_main">
+			<div class="content">
+				<div class="main_detail">
+					<div class="live2d">
+						<canvas id=canvas></canvas>
+					</div>
+					<div class="dollinfo_wrapper">
+						<div class="dollinfo">
+							<div class="gc gc--1-of-3">
+								<div class="dollinfo_tabs_menu">
+									<div class="hvr-shadow-radial active"><span>Alisa</span></div>
+									<div class="hvr-shadow-radial"><span>Умения</span></div>
+									<div class="hvr-shadow-radial"><span>Рекомендации</span></div>
+									<div class="hvr-shadow-radial"><span>Инфо</span></div>
+								</div>
+							</div>
+							<div class="gc gc--2-of-3">
+								<ul class="nacc">
+									<li class="nacc_item active">
+										<div class="aboutdoll">
+											<div class="aboutdoll_name">
+												Alisa <br>
+												<span>Malfunction Free</span>
+											</div>
+											<div class="aboutdoll_descr_wrapper">
+												<div class="aboutdoll_descr">
+													<p>
+														UAZV Akaset was a battle vessel that
+														served with the Royal Navy of Zoek, a core
+														nation of the Universe Alliance. After
+														suffering damage beyond repair, her AI
+														module was retrieved and salvaged into
+														her current synthetic humanoid body.
+														Regardless of her peerless computing
+														prowess, Akaset still can not determine the difference between a
+														hug
+														or
+														an
+														oncoming attack. Akaset has her own
+														unique personality as a super AI. She
+														prefers to stay in her passive idle mode,
+														and only performs actions when
+														instructed.
+													</p>
+												</div>
+												<div class="dollstats_wrapper">
+													<div class="dollstats">
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_7.png" alt="">
+															</div>
+															<div class="stat_name">ATK</div>
+															<div class="stat_value">44</div>
+														</div>
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_9.png" alt="">
+															</div>
+															<div class="stat_name">HP</div>
+															<div class="stat_value">254</div>
+														</div>
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_10.png" alt="">
+															</div>
+															<div class="stat_name">SPD</div>
+															<div class="stat_value">36</div>
+														</div>
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_11.png" alt="">
+															</div>
+															<div class="stat_name">DEF</div>
+															<div class="stat_value">21</div>
+														</div>
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_14.png" alt="">
+															</div>
+															<div class="stat_name">SP</div>
+															<div class="stat_value">30</div>
+														</div>
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_22.png" alt="">
+															</div>
+															<div class="stat_name">EVA</div>
+															<div class="stat_value">0%</div>
+														</div>
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_24.png" alt="">
+															</div>
+															<div class="stat_name">CRIT</div>
+															<div class="stat_value">5%</div>
+														</div>
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_26.png" alt="">
+															</div>
+															<div class="stat_name">CRIT DMG</div>
+															<div class="stat_value">150%</div>
+														</div>
+													</div>
+													<div class="dollsd">
+														<img src="/img/SD/AkasetSD.gif" alt="">
+													</div>
+												</div>
+												<div class="dolltraits">
+
+													<div class="traits">
+														<div class="traitone">
+															<div class="traitname">
+																Особенность
+																<img src="/img/MazeRpgTeam_Image_05.png" alt="">
+																Icy Volumes
+															</div>
+															После атаки Алисы по врагу атрибутом Холода, увеличивает урон от атак
+															атрибутом Холода по этой цели на <span id="alisa_traits_one">5</span>% и понижает его
+															сопротивление Заморозке на 15% на 1 ход.
+														</div>
+														<div class="traittwo">
+															<div class="traitname">
+																Особенность
+																<img src="/img/MazeRpgTeam_Image_05.png" alt="">
+																Fiery Volumes
+															</div>
+															Увеличивает урон атрибута холода вашего отряда на <span
+																id="akaset_traits_two">5</span>%. Один
+															раз за бой, когда Akaset получает смертельный урон, эффект
+															удаляется и накладывается эффект' <span
+																class="tooltip icebarrier"
+																data-tooltip="Неуязвимость. Невозможно действовать.">Ice
+																Barrier</span> на 1 ход.
+														</div>
+														<div class="progressbar">
+															<img src="/img/icons/ComToggle_86.png" alt="">
+															<img class="icon_blink" src="/img/icons/ComToggle_87.png"
+																alt="">
+															<img class="icon_blink" src="/img/icons/ComToggle_87.png"
+																alt="">
+															<img class="icon_blink" src="/img/icons/ComToggle_87.png"
+																alt="">
+															<img class="icon_blink" src="/img/icons/ComToggle_87.png"
+																alt="">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</li>
+									<li class="nacc_item">
+										<div>
+											<div class="doll_skillsets_wrapper">
+												<div class="doll_skillsets_menu">
+
+													<div class="menu_item active first_ss">
+														<div class="ss_icon">
+															<img src="/img/icons/SS/akaset/BattleSkillGroupIcon_201.png"
+																alt="">
+														</div>
+														<div class="ss_descr">
+															<p>Space Cruiser</p>
+															<hr>
+															<div class="type_skillset lightning">
+																Lightning
+															</div>
+															<div class="type_skillset attacker">
+																Attacker
+															</div>
+														</div>
+													</div>
+													<div class="menu_item second_ss">
+														<div class="ss_icon">
+															<img src="/img/icons/SS/akaset/BattleSkillGroupIcon_202.png"
+																alt="">
+														</div>
+														<div class="ss_descr">
+															<p>Glacial Escort</p>
+															<hr>
+															<div class="type_skillset frost">
+																Frost
+															</div>
+															<div class="type_skillset attacker">
+																Defender
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="doll_skilsets first_tab active">
+													<div class="skillset_skills_wrapper card-stack-carousel"
+														data-interval="false">
+														<div class="skillset_skills">
+															<div class="skill card-stack-carousel__card active">
+																<div class="skilldescr_wrapper firstsswrapper active">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/akaset/BattleSkillIcon_102110.png"
+																				alt="">
+																		</div>
+																		<div class="selecforname">
+																			<p>Electro Blast</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option one">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<hr>
+																		<span class="type">Basic</span><span
+																			class="cost">Стоимость: 0 SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>Атакует противника атрибутом молнии,
+																			наносит (100% от ATK).</span>
+																	</div>
+																</div>
+															</div>
+															<div class="skill card-stack-carousel__card">
+																<div class="skilldescr_wrapper firstsswrapper">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/akaset/BattleSkillIcon_102210.png"
+																				alt="">
+																		</div>
+																		<div class="selecforname">
+																			<p>Satellite Lightning</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option two">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+
+																		</div>
+																		<hr>
+																		<span class="type">Core</span><span
+																			class="cost">Стоимость: <span
+																				class="sp_count">20 </span> SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>Атакует противника в первом ряду атрибутом
+																			молнии, нанося 150% от ATK и снижая
+																			наносимый целью урон на 15% на 2
+																			хода.</span>
+																	</div>
+																</div>
+															</div>
+															<div class="skill card-stack-carousel__card">
+																<div class="skilldescr_wrapper firstsswrapper">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/akaset/BattleSkillIcon_102310.png"
+																				alt="">
+																		</div>
+																		<div class="selecforname">
+																			<p>EMP Storm</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option three">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<hr>
+																		<span class="type">Special</span><span
+																			class="cost">Стоимость: 40 SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>Атакует противников в первом ряду
+																			атрибутом молнии, нанося 90% от ATK и
+																			увеличивая получаемый целью урон от AoE атак
+																			на 10% на 2 хода.</span>
+																	</div>
+																</div>
+															</div>
+															<div class="skill card-stack-carousel__card">
+																<div class="skilldescr_wrapper firstsswrapper">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/akaset/BattleSkillIcon_102410.png"
+																				alt="">
+																		</div>
+																		<div class="skillpreview">
+																			<div class="ultimatepreview modal__button"
+																				id="open-modal">
+																			</div>
+																		</div>
+																		<div class="selecforname">
+																			<p>TD Beam</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option four">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<hr>
+																		<span class="type">Ultimate</span><span
+																			class="cost">Стоимость: <span
+																				class="sp_count"> 80 </span>SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>Атакует противников в первом ряду
+																			атрибутом молнии, нанося 180% от ATK и
+																			накладывает статус <span
+																				class="tooltip electrify"
+																				data-tooltip="При получении урона атрибутом молнии, дает 1 стак Shock.">Electrify</span>
+																			на 2
+																			хода.</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="card-stack-carousel__indicators">
+															<div class="dots"><a href="#0"></a></div>
+															<div class="dots"><a href="#1"></a></div>
+															<div class="dots"><a href="#2"></a></div>
+															<div class="dots"><a href="#3"></a></div>
+														</div>
+													</div>
+												</div>
+												<div class="doll_skilsets second_tab">
+													<div class="skillset_skills_wrapper card-stack-carousel"
+														data-interval="false">
+														<div class="skillset_skills">
+															<div class="skill card-stack-carousel__card active">
+																<div class="skilldescr_wrapper firstsswrapper active">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/akaset/BattleSkillIcon_102120.png"
+																				alt="">
+																		</div>
+																		<div class="selecforname">
+																			<p>Cryo Ray</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option five">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<hr>
+																		<span class="type">Basic</span><span
+																			class="cost">Стоимость: 0 SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>Атакует противника атрибутом холода,
+																			наносит
+																			(100%
+																			от
+																			ATK).</span>
+																	</div>
+																</div>
+															</div>
+															<div class="skill card-stack-carousel__card">
+																<div class="skilldescr_wrapper firstsswrapper">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/akaset/BattleSkillIcon_102220.png"
+																				alt="">
+																		</div>
+																		<div class="selecforname">
+																			<p>Icicle Shelling</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option six">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+
+																		</div>
+																		<hr>
+																		<span class="type">Core</span><span
+																			class="cost">Стоимость: <span
+																				class="sp_count">30 </span> SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>Атакует всех противников атрибутом
+																			холода, нанося 60% от ATK и увеличивает DEF
+																			Akaset на 20% на 2 хода.</span>
+																	</div>
+																</div>
+															</div>
+															<div class="skill card-stack-carousel__card">
+																<div class="skilldescr_wrapper firstsswrapper">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/akaset/BattleSkillIcon_102320.png"
+																				alt="">
+																		</div>
+																		<div class="selecforname">
+																			<p>Data Analysis</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option seven">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<hr>
+																		<span class="type">Special</span><span
+																			class="cost">Стоимость: 0 SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>В конце каждого хода подсчитывается
+																			количество
+																			попаданий, полученных Акасет за этот ход.
+																			Если
+																			было получено больше АоЕ-попаданий,
+																			уменьшается
+																			урон, получаемый от АоЕ-атак для всего
+																			отряда на
+																			2%. В противном случае уменьшается урон,
+																			получаемый Акасет от атак по одиночной цели,
+																			на
+																			2%, суммирется до 5 раз.</span>
+																	</div>
+																</div>
+															</div>
+															<div class="skill card-stack-carousel__card">
+																<div class="skilldescr_wrapper firstsswrapper">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/akaset/BattleSkillIcon_102420.png"
+																				alt="">
+																		</div>
+																		<div class="skillpreview">
+																			<div class="ultimatepreview modal__button"
+																				id="open-modal-two">
+																			</div>
+																		</div>
+																		<div class="selecforname">
+																			<p>I-Field</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option eight">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<hr>
+																		<span class="type">Ultimate</span><span
+																			class="cost">Стоимость: <span
+																				class="sp_count">80 </span> SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>Дает каждой кукле 2 заряда I-Field
+																			(сумируется). Каждый заряд может снизить
+																			входящий урон на 25% на один раз.</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="card-stack-carousel__indicators second_dots">
+															<div class="dots"><a href="#0"></a></div>
+															<div class="dots"><a href="#1"></a></div>
+															<div class="dots"><a href="#2"></a></div>
+															<div class="dots"><a href="#3"></a></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="nacc_item">
+										<div class="recommendation_wrap">
+											<div class="recommendation_verves">
+												<div class="recommendation_verves_title">
+													Рекомендованные карты (Verves)
+												</div>
+												<div class="verves_images_wrapper">
+													<div class="verves_images">
+														<div class="priority_level">
+															<img src="/img/icons/ChallengeWorldBossDetailUI_Name_11.png"
+																alt="">
+														</div>
+														<ul class="prority_verves_list">
+															<li class="prority_verves">
+																<div class="inner"><img
+																		src="/img/verves/Equip_HeadIcon_SSR_2.png"
+																		alt="">
+																	<div class="mask"></div>
+																</div>
+																<div class="inner hideed "><img
+																		src="/img/verves/Equip_Icon_SSR_2.png" alt="">
+																	<div class="mask"></div>
+																	<div class="details_button">
+																		<img src="/img/TownLibraryUI_Image_97.png"
+																			alt="">
+																	</div>
+																	<div class="details">
+																		<div class="verve_name">
+																			<span>Child of Sand</span>
+																		</div>
+																		<hr>
+																		<div class="verve_stats">
+																			<div class="verve_stats_atk">
+																				<img src="/img/icons/MainAtt_7.png"
+																					alt="">
+																				<span>27</span>
+																			</div>
+																			<div class="verve_stats_hp">
+																				<img src="/img/icons/MainAtt_9.png"
+																					alt="">
+																				<span>207</span>
+																			</div>
+																			<div class="verve_stats_def">
+																				<img src="/img/icons/MainAtt_11.png"
+																					alt="">
+																				<span>17</span>
+																			</div>
+																		</div>
+																		<div class="section_name">
+																			<img src="/img/icons/ComLine_13.png" alt="">
+																			<span>Пассивное умение</span>
+																			<img src="/img/icons/ComLine_05.png" alt="">
+																		</div>
+																		<div class="passiveskill_verve">
+																			Получаемый урон -4%
+																		</div>
+																		<div class="section_name_traits">
+																			<img src="/img/icons/ComLine_13.png" alt="">
+																			<span>Особенность</span>
+																			<img src="/img/icons/ComLine_05.png" alt="">
+																		</div>
+																		<div class="verve_traits">
+																			Снижает получаемый носителем урон
+																			на 1% /
+																			1,2% / 1,6% / 2% / 2,5% за каждые 10%
+																			недостающего
+																			Здоровья
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="prority_verves">
+																<div class="inner"><img
+																		src="/img/verves/Equip_HeadIcon_SR_18.png"
+																		alt="">
+																	<div class="mask"></div>
+																</div>
+																<div class="inner hideed"><img
+																		src="/img/verves/Equip_Icon_SR_18.png" alt="">
+																	<div class="mask"></div>
+																	<div class="details_button">
+																		<img src="/img/TownLibraryUI_Image_97.png"
+																			alt="">
+																	</div>
+																	<div class="details">
+																		<div class="verve_name">
+																			<span>Gate Keeper</span>
+																		</div>
+																		<hr>
+																		<div class="verve_stats">
+																			<div class="verve_stats_atk">
+																				<img src="/img/icons/MainAtt_7.png"
+																					alt="">
+																				<span>14</span>
+																			</div>
+																			<div class="verve_stats_hp">
+																				<img src="/img/icons/MainAtt_9.png"
+																					alt="">
+																				<span>102</span>
+																			</div>
+																			<div class="verve_stats_def">
+																				<img src="/img/icons/MainAtt_11.png"
+																					alt="">
+																				<span>8</span>
+																			</div>
+																		</div>
+																		<div class="section_name">
+																			<img src="/img/icons/ComLine_13.png" alt="">
+																			<span>Пассивное умение</span>
+																			<img src="/img/icons/ComLine_05.png" alt="">
+																		</div>
+																		<div class="passiveskill_verve">
+																			Получаемый урон -3%
+																		</div>
+																		<div class="section_name_traits">
+																			<img src="/img/icons/ComLine_13.png" alt="">
+																			<span>Особенность</span>
+																			<img src="/img/icons/ComLine_05.png" alt="">
+																		</div>
+																		<div class="verve_traits">
+																			Снижает урон, получаемый носителем, на 2% +
+																			дополнительные 0,5% / 1% / 1,5% / 2% за
+																			оставшихся врагов.
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="prority_verves">
+																<div class="inner"><img
+																		src="/img/verves/Equip_HeadIcon_SR_2.png"
+																		alt="">
+																	<div class="mask"></div>
+																</div>
+																<div class="inner hideed"><img
+																		src="/img/verves/Equip_Icon_SR_2.png" alt="">
+																	<div class="mask"></div>
+																	<div class="details_button">
+																		<img src="/img/TownLibraryUI_Image_97.png"
+																			alt="">
+																	</div>
+																	<div class="details">
+																		<div class="verve_name">
+																			<span>Witch Hunter</span>
+																		</div>
+																		<hr>
+																		<div class="verve_stats">
+																			<div class="verve_stats_atk">
+																				<img src="/img/icons/MainAtt_7.png"
+																					alt="">
+																				<span>14</span>
+																			</div>
+																			<div class="verve_stats_hp">
+																				<img src="/img/icons/MainAtt_9.png"
+																					alt="">
+																				<span>102</span>
+																			</div>
+																			<div class="verve_stats_def">
+																				<img src="/img/icons/MainAtt_11.png"
+																					alt="">
+																				<span>8</span>
+																			</div>
+																		</div>
+																		<div class="section_name">
+																			<img src="/img/icons/ComLine_13.png" alt="">
+																			<span>Пассивное умение</span>
+																			<img src="/img/icons/ComLine_05.png" alt="">
+																		</div>
+																		<div class="passiveskill_verve">
+																			Получаемый урон -3%
+																		</div>
+																		<div class="section_name_traits">
+																			<img src="/img/icons/ComLine_13.png" alt="">
+																			<span>Особенность</span>
+																			<img src="/img/icons/ComLine_05.png" alt="">
+																		</div>
+																		<div class="verve_traits">
+																			В начале каждого раунда снижает получаемый
+																			носителем урон на 8% / 10% / 12% / 15% в
+																			течение хода с 50% шансом
+																		</div>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="verves_images">
+														<div class="priority_level">
+															<img src="/img/icons/ChallengeWorldBossDetailUI_Name_10.png"
+																alt="">
+														</div>
+														<ul class="prority_verves_list">
+															<li class="prority_verves">
+																<div class="inner"><img
+																		src="/img/verves/Equip_HeadIcon_SSR_17.png"
+																		alt="">
+																	<div class="mask"></div>
+																</div>
+																<div class="inner hideed "><img
+																		src="/img/verves/Equip_Icon_SSR_17.png" alt="">
+																	<div class="mask"></div>
+																	<div class="details_button">
+																		<img src="/img/TownLibraryUI_Image_97.png"
+																			alt="">
+																	</div>
+																	<div class="details">
+																		<div class="verve_name">
+																			<span>Fullmetal Golem</span>
+																		</div>
+																		<hr>
+																		<div class="verve_stats">
+																			<div class="verve_stats_atk">
+																				<img src="/img/icons/MainAtt_7.png"
+																					alt="">
+																				<span>27</span>
+																			</div>
+																			<div class="verve_stats_hp">
+																				<img src="/img/icons/MainAtt_9.png"
+																					alt="">
+																				<span>207</span>
+																			</div>
+																			<div class="verve_stats_def">
+																				<img src="/img/icons/MainAtt_11.png"
+																					alt="">
+																				<span>17</span>
+																			</div>
+																		</div>
+																		<div class="section_name">
+																			<img src="/img/icons/ComLine_13.png" alt="">
+																			<span>Пассивное умение</span>
+																			<img src="/img/icons/ComLine_05.png" alt="">
+																		</div>
+																		<div class="passiveskill_verve">
+																			Получаемое лечение +8%
+																		</div>
+																		<div class="section_name_traits">
+																			<img src="/img/icons/ComLine_13.png" alt="">
+																			<span>Особенность</span>
+																			<img src="/img/icons/ComLine_05.png" alt="">
+																		</div>
+																		<div class="verve_traits">
+																			В конце каждого раунда исцеляет носителя на
+																			32% / 40% / 59% / 64% / 80% от Защиты
+																		</div>
+																	</div>
+																</div>
+															</li>
+															<li class="prority_verves">
+																<div class="inner"><img
+																		src="/img/verves/Equip_HeadIcon_SSR_27.png"
+																		alt="">
+																	<div class="mask"></div>
+																</div>
+																<div class="inner hideed"><img
+																		src="/img/verves/Equip_Icon_SSR_27.png" alt="">
+																	<div class="mask"></div>
+																	<div class="details_button">
+																		<img src="/img/TownLibraryUI_Image_97.png"
+																			alt="">
+																	</div>
+																	<div class="details">
+																		<div class="verve_name">
+																			<span>King Knight</span>
+																		</div>
+																		<hr>
+																		<div class="verve_stats">
+																			<div class="verve_stats_atk">
+																				<img src="/img/icons/MainAtt_7.png"
+																					alt="">
+																				<span>27</span>
+																			</div>
+																			<div class="verve_stats_hp">
+																				<img src="/img/icons/MainAtt_9.png"
+																					alt="">
+																				<span>207</span>
+																			</div>
+																			<div class="verve_stats_def">
+																				<img src="/img/icons/MainAtt_11.png"
+																					alt="">
+																				<span>17</span>
+																			</div>
+																		</div>
+																		<div class="section_name">
+																			<img src="/img/icons/ComLine_13.png" alt="">
+																			<span>Пассивное умение</span>
+																			<img src="/img/icons/ComLine_05.png" alt="">
+																		</div>
+																		<div class="passiveskill_verve">
+																			Защита +8% </div>
+																		<div class="section_name_traits">
+																			<img src="/img/icons/ComLine_13.png" alt="">
+																			<span>Особенность</span>
+																			<img src="/img/icons/ComLine_05.png" alt="">
+																		</div>
+																		<div class="verve_traits">
+																			В начале каждого раунда повышает Защиту
+																			носителя на 2% / 3% / 3% / 4% / 5%,
+																			суммирется до 5 раз.
+																		</div>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="verves_images">
+														<div class="priority_level">
+															<img src="/img/icons/ChallengeWorldBossDetailUI_Name_09.png"
+																alt="">
+														</div>
+														<ul class="prority_verves_list">
+															<li class="prority_verves">
+																<div class="inner"><img
+																		src="/img/verves/Equip_HeadIcon_SSR_3.png"
+																		alt="">
+																	<div class="mask"></div>
+																</div>
+																<div class="inner hideed"><img
+																		src="/img/verves/Equip_Icon_SSR_3.png" alt="">
+																	<div class="mask"></div>
+																	<div class="details_button">
+																		<img src="/img/TownLibraryUI_Image_97.png"
+																			alt="">
+																	</div>
+																	<div class="details">
+																		<div class="verve_name">
+																			<span>Valorous</span>
+																		</div>
+																		<hr>
+																		<div class="verve_stats">
+																			<div class="verve_stats_atk">
+																				<img src="/img/icons/MainAtt_7.png"
+																					alt="">
+																				<span>27</span>
+																			</div>
+																			<div class="verve_stats_hp">
+																				<img src="/img/icons/MainAtt_9.png"
+																					alt="">
+																				<span>207</span>
+																			</div>
+																			<div class="verve_stats_def">
+																				<img src="/img/icons/MainAtt_11.png"
+																					alt="">
+																				<span>17</span>
+																			</div>
+																		</div>
+																		<div class="section_name">
+																			<img src="/img/icons/ComLine_13.png" alt="">
+																			<span>Пассивное умение</span>
+																			<img src="/img/icons/ComLine_05.png" alt="">
+																		</div>
+																		<div class="passiveskill_verve">
+																			Защита +8% </div>
+																		<div class="section_name_traits">
+																			<img src="/img/icons/ComLine_13.png" alt="">
+																			<span>Особенность</span>
+																			<img src="/img/icons/ComLine_05.png" alt="">
+																		</div>
+																		<div class="verve_traits">
+																			Когда носитель теряет более 70% от
+																			максимального Здоровья за один удар,
+																			исцеляет её на 12% / 15% / 19% / 24% / 30%
+																			от полученного урона.
+																		</div>
+																	</div>
+																</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="recommendation_skill">
+												<div class="recommendation_skill_title">
+													Приоритет прокачки умений
+												</div>
+												<div class="skill_priotity_wrapper">
+													<div class="skill_priotity high_priority">
+														<span>Высокий</span>
+														<div class="skill_priotity_icon">
+															<img src="/img/icons/SS/akaset/BattleSkillIcon_102410.png"
+																alt="">
+														</div>
+													</div>
+													<div class="skill_priotity middle_priority">
+														<span>Средний</span>
+														<div class="skill_priotity_icon">
+															<img src="/img/icons/SS/akaset/BattleSkillIcon_102420.png"
+																alt="">
+														</div>
+													</div>
+													<div class="skill_priotity low_priority">
+														<span>Низкий</span>
+														<div class="skill_priotity_icon">
+															<img src="/img/icons/SS/akaset/BattleSkillIcon_102210.png"
+																alt="">
+															<img src="/img/icons/SS/akaset/BattleSkillIcon_102120.png"
+																alt="">
+															<img src="/img/icons/SS/akaset/BattleSkillIcon_102220.png"
+																alt="">
+															<img src="/img/icons/SS/akaset/BattleSkillIcon_102320.png"
+																alt="">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="nacc_item">
+										<div class="info_wrapper">
+											<div class="info">
+												<div class="info_metrika">
+													<div class="dollheight">Рост: <span>129,53 См</span></div>
+													<div class="dollweight">Вес: <span>26 Кг</span></div>
+													<div class="dollva">Сэйю: <span>Yui Ogura</span></div>
+													<hr>
+													<div class="dollbirthday">День рождения: <span>08 июня</span></div>
+													<div class="dollage">Возраст: <span>???</span></div>
+													<div class="dollzodiac">Знак зодиака: <span>Близнецы</span></div>
+												</div>
+												<div class="info_giftfood_wrapper">
+													<div class="info_giftfood">
+														<div class="dollfoods">
+															<div class="dollfoods_title">
+																Любимая еда
+															</div>
+															<div class="grey food">
+																<img src="/img/icons/food/Item_Icon_Food_41.png" alt="">
+																<span>80</span>
+															</div>
+															<div class="green food">
+																<img src="/img/icons/food/Item_Icon_Food_44.png" alt="">
+																<span>140</span>
+															</div>
+															<div class="green food">
+																<img src="/img/icons/food/Item_Icon_Food_66.png" alt="">
+																<span>140</span>
+															</div>
+															<div class="blue food">
+																<img src="/img/icons/food/Item_Icon_Food_47.png" alt="">
+																<span>200</span>
+															</div>
+															<div class="blue food">
+																<img src="/img/icons/food/Item_Icon_Food_30.png" alt="">
+																<span>200</span>
+															</div>
+															<div class="purple food">
+																<img src="/img/icons/food/Item_Icon_Food_68.png" alt="">
+																<span>320</span>
+															</div>
+															<div class="purple food">
+																<img src="/img/icons/food/Item_Icon_Food_65.png" alt="">
+																<span>320</span>
+															</div>
+														</div>
+														<div class="dollgift">
+															<div class="dollgift_title">
+																Любимые подарки
+															</div>
+															<div class="green gift">
+																<img src="/img/icons/gifts/Item_Icon_FormalGift_02_06.png"
+																	alt="">
+																<span>100</span>
+															</div>
+															<div class="green gift">
+																<img src="/img/icons/gifts/Item_Icon_FormalGift_02_07.png"
+																	alt="">
+																<span>100</span>
+															</div>
+															<div class="blue gift">
+																<img src="/img/icons/gifts/Item_Icon_FormalGift_03_05.png"
+																	alt="">
+																<span>160</span>
+															</div>
+															<div class="purple gift">
+																<img src="/img/icons/gifts/Item_Icon_FormalGift_03_08.png"
+																	alt="">
+																<span>300</span>
+															</div>
+															<div class="purple gift">
+																<img src="/img/icons/gifts/Item_Icon_FormalGift_02_05.png"
+																	alt="">
+																<span>300</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="dollcg_wrapper">
+													<div class="dollcg">
+														<div class="dollcg_name">
+															CG
+														</div>
+														<div id="dollcglist">
+															<a href="/img/CG/Akaset/NewStory_Akaset_Big_01.png">
+																<img src="/img/CG/Akaset/preview/NewStory_Akaset_Small_01.png"
+																	alt="">
+															</a>
+															<a href="/img/CG/Akaset/NewStory_Akaset_Big_02.png">
+																<img src="/img/CG/Akaset/preview/NewStory_Akaset_Small_02.png"
+																	alt="">
+															</a>
+															<a href="/img/CG/Akaset/NewStory_Akaset_Big_03.png">
+																<img src="/img/CG/Akaset/preview/NewStory_Akaset_Small_03.png"
+																	alt="">
+															</a>
+															<a href="/img/CG/Akaset/Dating_Akaset_Big_01.png">
+																<img src="/img/CG/Akaset/preview/Dating_Akaset_Small_01.png"
+																	alt="">
+															</a>
+															<a href="/img/CG/Akaset/Dating_Akaset_Big_04.png">
+																<img src="/img/CG/Akaset/preview/Dating_Akaset_Small_04.png"
+																	alt="">
+															</a>
+														</div>
+													</div>
+												</div>
+												<div class="dollcg_wrapper">
+													<div class="dollcg">
+														<div class="dollcg_name">
+															Скины
+														</div>
+														<div id="dollskinlist">
+															<a
+																href="/img/skins/Akaset/Image_Akaset_Dress_02_Battle01.png">
+																<img src="/img/skins/Akaset/Akaset_skin_preview.png"
+																	alt="">
+															</a>
+															<a href="/img/skins/Akaset/Maze_Akaset_02.gif">
+																<img src="/img/skins/Akaset/Maze_Akaset_02.gif" alt="">
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<!--<li class="nacc_item">
+										<div class="recommendation_wrap">
+											<div class="recommendation_verves">
+												<div class="recommendation_verves_title">
+													Рекомендованные карты (Verves)
+												</div>
+												<div class="verves_images">
+													<ul class="prority_verves_list_test">
+														<li class="prority_verves_test" verveid="SSR_2">
+															<div class="inner"><img
+																	src="/img/verves/Equip_HeadIcon_SSR_2.png" alt="">
+
+															</div>
+														</li>
+														<li class="prority_verves_test" verveid="SR_18">
+															<div class="inner"><img
+																	src="/img/verves/Equip_HeadIcon_SR_18.png" alt="">
+															</div>
+														</li>
+														<li class="prority_verves_test" verveid="SR_2">
+															<div class="inner"><img
+																	src="/img/verves/Equip_HeadIcon_SR_2.png" alt="">
+															</div>
+														</li>
+													</ul>
+													<ul class="prority_verves_list_test">
+														<li class="prority_verves_test">
+															<div class="inner"><img
+																	src="/img/verves/Equip_HeadIcon_SSR_2.png" alt="">
+															</div>
+														</li>
+														<li class="prority_verves_test">
+															<div class="inner"><img
+																	src="/img/verves/Equip_HeadIcon_SR_18.png" alt="">
+															</div>
+														</li>
+														<li class="prority_verves_test">
+															<div class="inner"><img
+																	src="/img/verves/Equip_HeadIcon_SR_2.png" alt="">
+															</div>
+														</li>
+													</ul>
+													<ul class="prority_verves_list_test">
+														<li class="prority_verves_test">
+															<div class="inner"><img
+																	src="/img/verves/Equip_HeadIcon_SSR_2.png" alt="">
+															</div>
+														</li>
+														<li class="prority_verves_test">
+															<div class="inner"><img
+																	src="/img/verves/Equip_HeadIcon_SR_18.png" alt="">
+															</div>
+														</li>
+														<li class="prority_verves_test">
+															<div class="inner"><img
+																	src="/img/verves/Equip_HeadIcon_SR_2.png" alt="">
+															</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="recommendation_skill_test">
+												<div class="recommendation_skill_title_test">
+													Приоритет прокачки умений
+												</div>
+											</div>
+										</div>
+									</li> 
+									-->
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal__container" id="modal-container">
+		<div class="modal__content">
+			<div class="modal__close close-modal" title="Close">
+				<i class="fas fa-times"></i>
+			</div>
+			<video id="video" controls="controls" controlslist="nodownload" disablepictureinpicture
+				src="/video/akaset.mp4"></video>
+		</div>
+	</div>
+	<div class="modal__container" id="modal-container-two">
+		<div class="modal__content">
+			<div class="modal__close close-modal" title="Close">
+				<i class="fas fa-times"></i>
+			</div>
+			<video id="videotwo" controls="controls" controlslist="nodownload" disablepictureinpicture
+				src="/video/akaset2.mp4"></video>
+		</div>
+	</div>
+	<div class="modal_test_wrap">
+
+	</div>
+	<script src="/lib/js/akaset_live2d.js"></script>
+	<script src="/lib/js/tabs.js"></script>
+	<script src="/lib/js/progressbar.js"></script>
+	<script src="/lib/js/carousel.js"></script>
+	<script src="/lib/js/select.js"></script>
+	<script src="/lib/js/modal_video.js"></script>
+	<script src="/lib/js/verves.js"></script>
+	<script src="/lib/js/gallery/lightgallery.min.js"></script>
+	<script src="/lib/js/gallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+	<script src="/lib/js/gallery/plugins/zoom/lg-zoom.min.js"></script>
+	<script src="/lib/js/gallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+	<script type="text/javascript">
+		lightGallery(document.getElementById('dollcglist', 'dollskinlist'), {
+			mode: 'lg-lollipop-rev',
+			plugins: [lgZoom, lgThumbnail, lgFullscreen],
+			speed: 500,
+		});
+	</script>
+	<script type="text/javascript">
+		lightGallery(document.getElementById('dollskinlist'), {
+			mode: 'lg-lollipop-rev',
+			plugins: [lgZoom, lgThumbnail, lgFullscreen],
+			speed: 500,
+		});
+	</script>
+
+
+</body>
+
+</html>
