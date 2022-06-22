@@ -119,7 +119,7 @@ height: 70px;
 	flex-direction: column;
 	background-color: #262d46;
 	box-shadow: 0 12px 22px rgba(0, 0, 0, .53);
-	border-radius: 15px;
+	border-radius: 12px;
 	width: 250px;
 	height: 450px;
 	margin: 15px;
@@ -152,7 +152,7 @@ height: 70px;
 }
 .doll_img img{
 	height: 300px;
-	border-radius: 20px;
+	border-radius: 12px;
 }
 .doll_icons{
 	display: flex;
@@ -212,6 +212,10 @@ height: 70px;
 .shadow{
 	background-color: #8f25f3a9;
 	color: #333;
+}
+.fire {
+	background-color: #d83013be;
+	color: #000;
 }
 .attacker{
 	color: #cbd5e0;
@@ -446,7 +450,7 @@ height: 70px;
 .dolltraits{
 	position: absolute;
 	bottom: 20px;
-	max-height: 300px;
+	height: fit-content;
 	font-size: 20px;
 	color: #9ab4da;
 	padding: 0 15px;
@@ -466,10 +470,12 @@ height: 70px;
 	align-items: center;
 	margin: 5px 0;
 	
+	
 }
 .traitname img{
 	height: 40px;
 	padding: 0;
+	padding: 0 5px;
 }
 .progressbar{
 	align-self: center;
@@ -1120,6 +1126,7 @@ height: 70px;
 	text-decoration: underline;
 	font-style: italic;
 	cursor: help;
+	
 }
 .tooltip:before,
 .tooltip:after{
@@ -1135,7 +1142,8 @@ height: 70px;
 .electrify:after,
 .electrocute:after,
 .chill:after,
-.icebarrier:after{
+.icebarrier:after,
+.firerune:after{
 	content: attr(data-tooltip);
 	background: rgb(59, 69, 105);
 	color: #fff;
@@ -1150,7 +1158,8 @@ height: 70px;
 .electrify:before,
 .electrocute:before,
 .chill:before,
-.icebarrier:before{
+.icebarrier:before,
+.firerune:before{
 	border-width: 10px 8px 0 8px;
 	border-style: solid;
 	border-color: #cbd5e0 transparent transparent transparent;
@@ -1209,14 +1218,29 @@ height: 70px;
 	left: -50px;
 	font-size: calc(10px * 1.25);
 }
+.firerune::after{
+	width: 180px;
+	height: 45px;
+	top: -70px;
+	left: -60px;
+	font-size: calc(10px * 1.25);
+	text-align: center;
+	letter-spacing: .8px;
+}
+.firerune::before{
+	top: -4px;
+	left: 35px;
+}
 .tooltip:hover:before,
 .tooltip:hover:after{
 	opacity: 1;
 	transform: translateY(-2px);
+	
 
 }
 .tooltip:hover{
 	z-index: 1;
+	
 }
 
 

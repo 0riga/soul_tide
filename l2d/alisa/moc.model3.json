@@ -1,0 +1,14 @@
+{
+  "Version": 3,
+  "FileReferences": {
+    "Moc": "moc.moc3",
+    "Textures": [
+      "textures/Alisa_texture_00.png"
+    ],
+    "Physics": "moc.physics3.json",
+    "Motions": {
+      "": []
+    }
+  },
+  "Groups": []
+}
