@@ -342,6 +342,9 @@ height: 70px;
  opacity: 1;
  transform: translateX(0px);
 }
+.nacc_item:nth-child(3){
+	padding: 15px;
+}
 
 .nacc_item p {
  margin: 0;
@@ -1400,8 +1403,8 @@ height: 70px;
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
 	transition: all .3s;
 	display: flex;
@@ -1479,14 +1482,14 @@ height: 70px;
   
 /*3 вкладка*/
 .recommendation_wrap{
-	width: 100%;
-	height: 100%;
+	width: 720px;
+	height: 870px;
 	overflow: visible !important;
 }
 .recommendation_verves{
-	width: calc(100% - 30px);
-	height: calc(70% - 30px);
-	margin: 15px;
+	width: 100%;
+	height: 70%;
+	margin-bottom: 15px;
 	background-color: rgb(59, 69, 105);
 	border-radius: 12px;
 }
@@ -1700,9 +1703,8 @@ height: 70px;
 	text-align: left;
 }
 .recommendation_skill{
-	width: calc(100% - 30px);
+	width: 100%;
 	height: calc(30% - 15px);
-	margin: 15px;
 	background-color: rgb(59, 69, 105);
 	border-radius: 12px;
 }
@@ -1812,7 +1814,7 @@ height: 70px;
 	border: none;
 	margin: 2px auto;
 	top: 85px;
-	left: calc(50% - 85px);
+	left: 275px;
 }
 .info_giftfood_wrapper{
 	width: 100%;
@@ -1824,8 +1826,7 @@ height: 70px;
 	width: 100%;
 	height: auto;
 	border-radius: 12px;
-	display: flex;
-	flex-direction: row;
+	display: inline-block;
 	padding: 10px 0;
 }
 .info_giftfood img{
@@ -1835,7 +1836,7 @@ height: 70px;
 }
 .dollfoods,
 .dollgift{
-	width: 50%;
+	width: 350px;
 	background-color: rgb(59, 69, 105);
 	height: fit-content;
 	display: flex;
@@ -1843,8 +1844,11 @@ height: 70px;
 	flex-wrap: wrap;
 	border-radius: 12px;
 }
+.dollgift{
+	float: right;
+}
 .dollfoods{
-	margin-right: 5px;
+	float: left;
 	text-align: center;
 }
 .dollfoods span,
@@ -1856,9 +1860,6 @@ height: 70px;
 	align-self: center;
 	margin: 0 auto;
 	
-}
-.dollgift{
-	margin-left: 5px;
 }
 .food,
 .gift{
