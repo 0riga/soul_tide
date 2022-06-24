@@ -94,6 +94,13 @@ border-radius: 20px;
 height: 70px;
 }
 
+.vk_link a svg{
+	margin: 10px;
+	margin-right: 30px;
+	fill: #718096;
+	float: right;
+	
+}
 
 .main{
 	padding-top: 15px;
@@ -787,6 +794,46 @@ height: 70px;
 	background-position: center;
 	background-size: contain;
   }
+  .card-stack-carousel__indicators.alisa_dots .dots:nth-child(1){
+	background-image: url(/img/icons/SS/alisa/BattleSkillIcon_125110.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.alisa_dots .dots:nth-child(2){
+	background-image: url(/img/icons/SS/alisa/BattleSkillIcon_125210.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.alisa_dots .dots:nth-child(3){
+	background-image: url(/img/icons/SS/alisa/BattleSkillIcon_125310.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.alisa_dots .dots:nth-child(4){
+	background-image: url(/img/icons/SS/alisa/BattleSkillIcon_125410.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.alisa_second_dots .dots:nth-child(1){
+	background-image: url(/img/icons/SS/alisa/BattleSkillIcon_125120.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.alisa_second_dots .dots:nth-child(2){
+	background-image: url(/img/icons/SS/alisa/BattleSkillIcon_125220.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.alisa_second_dots .dots:nth-child(3){
+	background-image: url(/img/icons/SS/alisa/BattleSkillIcon_125320.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.alisa_second_dots .dots:nth-child(4){
+	background-image: url(/img/icons/SS/alisa/BattleSkillIcon_125420.png);
+	background-position: center;
+	background-size: contain;
+  }
   .card-stack-carousel__card {
 	position: absolute;
 	width: 360px;
@@ -1067,7 +1114,6 @@ height: 70px;
 	color: #718096;
 	font-weight: 700;
 	padding: 15px;
-	overflow: hidden;
 	background-color: #1e243a;
 	border-radius: 12px;
 	margin: 15px;
@@ -1133,9 +1179,9 @@ height: 70px;
 	position: absolute;
 	content: "";
 	opacity: 0;
-	transition: all .4s ease;
+	
 	font-style: normal;
-	z-index: -10;
+	z-index: -1000000;
 }
 
 .shock:after,
@@ -1143,7 +1189,9 @@ height: 70px;
 .electrocute:after,
 .chill:after,
 .icebarrier:after,
-.firerune:after{
+.firerune:after,
+.frostbite:after,
+.frostrune:after{
 	content: attr(data-tooltip);
 	background: rgb(59, 69, 105);
 	color: #fff;
@@ -1159,7 +1207,9 @@ height: 70px;
 .electrocute:before,
 .chill:before,
 .icebarrier:before,
-.firerune:before{
+.firerune:before,
+.frostbite:before,
+.frostrune:before{
 	border-width: 10px 8px 0 8px;
 	border-style: solid;
 	border-color: #cbd5e0 transparent transparent transparent;
@@ -1231,12 +1281,31 @@ height: 70px;
 	top: -4px;
 	left: 35px;
 }
+.frostbite:after{
+	width: 200px;
+	height: 55px;
+	top: -80px;
+	left: -80px;
+}
+.frostbite:before{
+	top: -5px;
+	left: 25px;
+}
+.frostrune:before{
+	top: -5px;
+	left: 40px;
+}
+.frostrune:after{
+	width: 145px;
+	height: 45px;
+	top: -70px;
+	left: -40px;
+}
 .tooltip:hover:before,
 .tooltip:hover:after{
 	opacity: 1;
 	transform: translateY(-2px);
-	
-
+	transition: all .4s ease;
 }
 .tooltip:hover{
 	z-index: 1;
@@ -1928,7 +1997,7 @@ height: 100%;
 .tiercontent img{
 	height: 100%;
 }
-/*
+ /*verves page*/
 
   .modal_test_wrap{  
 	display: flex;
@@ -2101,8 +2170,10 @@ margin:20px 0 20px 50px;
 		-webkit-transform: scale(0);
 	}
 }
+		/*END
+		verves page*/
 
-*/
+
 .hide{
 	display: none;
 }
