@@ -835,6 +835,46 @@ height: 70px;
 	background-position: center;
 	background-size: contain;
   }
+  .card-stack-carousel__indicators.andrea_dots .dots:nth-child(1){
+	background-image: url(/img/icons/SS/andrea/BattleSkillIcon_122110.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.andrea_dots .dots:nth-child(2){
+	background-image: url(/img/icons/SS/andrea/BattleSkillIcon_122210.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.andrea_dots .dots:nth-child(3){
+	background-image: url(/img/icons/SS/andrea/BattleSkillIcon_122310.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.andrea_dots .dots:nth-child(4){
+	background-image: url(/img/icons/SS/andrea/BattleSkillIcon_122410.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.andrea_second_dots .dots:nth-child(1){
+	background-image: url(/img/icons/SS/andrea/BattleSkillIcon_122120.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.andrea_second_dots .dots:nth-child(2){
+	background-image: url(/img/icons/SS/andrea/BattleSkillIcon_122220.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.andrea_second_dots .dots:nth-child(3){
+	background-image: url(/img/icons/SS/andrea/BattleSkillIcon_122320.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.andrea_second_dots .dots:nth-child(4){
+	background-image: url(/img/icons/SS/andrea/BattleSkillIcon_122420.png);
+	background-position: center;
+	background-size: contain;
+  }
   .card-stack-carousel__card {
 	position: absolute;
 	width: 360px;
@@ -1175,6 +1215,23 @@ height: 70px;
 	cursor: help;
 	
 }
+.trait_css > .tooltip:after{
+	font-size: calc(10px * 1.25);
+	text-align: center;
+	letter-spacing: .8px;
+}
+.trait_css > .chill:after{
+	width: 160px;
+	height: 45px;
+	top: -68px;
+	left: -70px;
+}
+.trait_css > .shock:after{
+	width: 195px;
+	height: 65px;
+	top: -90px;
+	left: -80px;
+}
 .tooltip:before,
 .tooltip:after{
 	position: absolute;
@@ -1192,7 +1249,9 @@ height: 70px;
 .icebarrier:after,
 .firerune:after,
 .frostbite:after,
-.frostrune:after{
+.frostrune:after,
+.lockedon:after,
+.neuralink:after{
 	content: attr(data-tooltip);
 	background: rgb(59, 69, 105);
 	color: #fff;
@@ -1210,7 +1269,9 @@ height: 70px;
 .icebarrier:before,
 .firerune:before,
 .frostbite:before,
-.frostrune:before{
+.frostrune:before,
+.lockedon:before,
+.neuralink:before{
 	border-width: 10px 8px 0 8px;
 	border-style: solid;
 	border-color: #cbd5e0 transparent transparent transparent;
@@ -1301,6 +1362,26 @@ height: 70px;
 	height: 45px;
 	top: -70px;
 	left: -40px;
+}
+.lockedon:after{
+	width: 175px;
+	height: 50px;
+	top: -73px;
+	left: -55px;
+}
+.lockedon:before{
+	top: -5px;
+	left: 40px;
+}
+.neuralink:after{
+	width: 175px;
+	height: 55px;
+	top: -78px;
+	left: -50px;
+}
+.neuralink:before{
+	top: -5px;
+	left: 40px;
 }
 .tooltip:hover:before,
 .tooltip:hover:after{
@@ -1756,9 +1837,9 @@ height: 70px;
 	padding: 15px;
 }
 .info_metrika{
-	height: 20%;
+	height: 18%;
 	width: 100%;
-	padding: 10px;
+	padding: 0 10px;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -1777,7 +1858,7 @@ height: 70px;
 	height: 33%;
 	width: calc(50% - 40px);
 	text-align: left;
-	padding: 10px 20px;
+	padding: 15px 20px 0 20px;
 	align-self: center;
 	justify-self: center;
 }
@@ -1801,11 +1882,11 @@ height: 70px;
 	transform: rotate(90deg);
 	background: radial-gradient(circle, rgba(203,213,224,1) 25%, rgba(203,213,224,0.04245448179271705) 100%);
 	height: 1px;
-	width: 170px;
+	width: 150px;
 	border: none;
 	margin: 2px auto;
-	top: 85px;
-	left: 275px;
+	top: 78px;
+	left: 285px;
 }
 .info_giftfood_wrapper{
 	width: 100%;
