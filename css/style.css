@@ -1830,10 +1830,16 @@ height: 70px;
 	width: 350px;
 	background-color: rgb(59, 69, 105);
 	height: fit-content;
+	border-radius: 12px;
+	padding: 5px 10px 10px 10px;
+}
+.foodgift_content{
+	background-color: #1e243a;
+	border-radius: 12px;
+	padding-top: 10px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	border-radius: 12px;
 }
 .dollgift{
 	float: right;
@@ -1867,28 +1873,33 @@ height: 70px;
 	text-align: center;
 	color: #cbd5e0;
 	font-family: eras;
-	font-size: 20px;
-	padding: 5px 5px 15px 5px;
+	font-size: 22px;
+	font-weight: 700;
+	padding: 0 5px 5px 5px;
 }
 .grey img{
 	background-image: url(/img/icons/Icon_Quality_1.png);
 	background-size: contain;
 	padding: 0 3px;
+	border-radius: 12px;
 }
 .green img{
 	background-image: url(/img/icons/Icon_Quality_2.png);
 	background-size: contain;
 	padding: 0 3px;
+	border-radius: 12px;
 }
 .blue img{
 	background-image: url(/img/icons/Icon_Quality_3.png);
 	background-size: contain;
 	padding: 0 3px;
+	border-radius: 12px;
 }
 .purple img{
 	background-image: url(/img/icons/Icon_Quality_4.png);
 	background-size: contain;
 	padding: 0 3px;
+	border-radius: 12px;
 }
 .dollcg_wrapper{
 	width: 100%;
@@ -1897,22 +1908,37 @@ height: 70px;
 	border-radius: 12px;
 	margin-bottom: 20px;
 }
-
+.dollcg{
+	padding: 5px 10px 10px 10px;
+}
 .dollcg img{
-	max-width: 140px;
-	height: 115px;
-	border-radius: 18px;
-	padding: 0 5px;
+	max-width: 120px;
+	height: 97px;
+	border-radius: 12px;
 	transition: all .4s;
+	
 }
 #dollcglist,
 #dollskinlist{
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	padding: 5px 0 10px 0;
+	padding: 10px;
 	width: 100%;
 	list-style: none;
+	background-color: #1e243a;
+	border-radius: 12px;
+}
+#dollcglist a,
+#dollskinlist a{
+	width: fit-content;
+	height: 97px;
+	padding-right: 10px;
+}
+#dollcglist a:last-child,
+#dollskinlist a:last-child{
+	padding-right: 0;
+	width: fit-content;
 }
 .dollcg img:hover{
 	transform: scale(1.1);
@@ -1923,8 +1949,8 @@ height: 70px;
 	text-align: center;
 	color: #cbd5e0;
 	font-family: eras;
-	font-size: 20px;
-	padding-top: 5px;
+	font-size: 22px;
+	font-weight: 700;
 }
 
 /*tierlist*/
