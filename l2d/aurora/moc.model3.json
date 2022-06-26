@@ -1,0 +1,127 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "moc.moc3",
+		"Textures": [
+			"textures/Aurora_texture_00.png"
+		],
+		"Physics": "moc.physics3.json",
+		"Motions": {
+			"Idle": [
+				{
+					"File": "motions/CH_Aurora@Live2D_Greet1.motion3.json"
+				},
+				{
+					"File": "motions/CH_Aurora@Live2D_Greet2_3.motion3.json"
+				},
+				{
+					"File": "motions/CH_Aurora@Live2D_Greet3.motion3.json"
+				},
+				{
+					"File": "motions/CH_Aurora@Live2D_Greet4.motion3.json"
+				},
+				{
+					"File": "motions/CH_Aurora@Live2D_Insert01.motion3.json"
+				},
+				{
+					"File": "motions/CH_Aurora@Live2D_Insert02.motion3.json"
+				},
+				{
+					"File": "motions/CH_Aurora@Live2D_Insert03.motion3.json"
+				},
+				{
+					"File": "motions/CH_Aurora@Live2D_Insert04.motion3.json"
+				},
+				{
+					"File": "motions/CH_Aurora@Live2D_Joyful_Complete.motion3.json"
+				},
+				{
+					"File": "motions/CH_Aurora@Live2D_Standby2.motion3.json"
+				}
+			],
+			"TapBra": [
+				{
+					"File": "motions/CH_Aurora@Live2D_TCH1_Bra.motion3.json",
+					"Sound": "sounds/Aurora_Touch_Breast_01.wav"
+				},
+				{
+					"File": "motions/CH_Aurora@Live2D_TCH2_Bra.motion3.json",
+					"Sound": "sounds/Aurora_Touch_Breast_02.wav"
+				}
+			],
+			"TapHand": [
+				{
+					"File": "motions/CH_Aurora@Live2D_TCH1_Hand.motion3.json",
+					"Sound": "sounds/Aurora_Touch_Hand_02.wav"
+				},
+				{
+					"File": "motions/CH_Aurora@Live2D_TCH2_Hand_1.motion3.json",
+					"Sound": "sounds/Aurora_Touch_Hand_05.wav"
+				}
+			],
+			"TapHead": [
+				{
+					"File": "motions/CH_Aurora@Live2D_TCH1_Head.motion3.json",
+					"Sound": "sounds/Aurora_Touch_Head_01.wav"
+				},
+				{
+					"File": "motions/CH_Aurora@Live2D_TCH2_Head.motion3.json",
+					"Sound": "sounds/Aurora_Touch_Hand_02.wav"
+				},
+				{
+					"File": "motions/CH_Aurora@Live2D_TCH3_Head.motion3.json",
+					"Sound": "sounds/Aurora_Touch_Head_05.wav"
+				}
+			],
+			"TapHip": [
+				{
+					"File": "motions/CH_Aurora@Live2D_TCH1_Hip_1.motion3.json",
+					"Sound": "sounds/Aurora_Touch_Hip_01.wav"
+				},
+				{
+					"File": "motions/CH_Aurora@Live2D_TCH2_Hip_1.motion3.json",
+					"Sound": "sounds/Aurora_Touch_Hip_02.wav"
+				}
+			]
+		}
+	},
+			"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": [
+				"ParamMouthOpenY"
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
+			]
+		}
+	],
+	"HitAreas": [
+		{
+			"Id": "DREFTouchBoxHandL",
+			"Name": "HandL"
+		},
+		{
+			"Id": "DREFTouchBoxHandR",
+			"Name": "HandR"
+		},
+		{
+			"Id": "DREFTouchBoxHead",
+			"Name": "Head"
+		},
+		{
+			"Id": "DREFTouchBoxBra",
+			"Name": "Bra"
+		},
+		{
+			"Id": "DREFTouchBoxHip",
+			"Name": "Hip"
+		}
+	]
+}
