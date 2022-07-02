@@ -875,6 +875,46 @@ height: 70px;
 	background-position: center;
 	background-size: contain;
   }
+  .card-stack-carousel__indicators.asuna_dots .dots:nth-child(1){
+	background-image: url(/img/icons/SS/asuna/BattleSkillIcon_106110.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.asuna_dots .dots:nth-child(2){
+	background-image: url(/img/icons/SS/asuna/BattleSkillIcon_106210.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.asuna_dots .dots:nth-child(3){
+	background-image: url(/img/icons/SS/asuna/BattleSkillIcon_106310.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.asuna_dots .dots:nth-child(4){
+	background-image: url(/img/icons/SS/asuna/BattleSkillIcon_106410.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.asuna_second_dots .dots:nth-child(1){
+	background-image: url(/img/icons/SS/asuna/BattleSkillIcon_106120.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.asuna_second_dots .dots:nth-child(2){
+	background-image: url(/img/icons/SS/asuna/BattleSkillIcon_106220.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.asuna_second_dots .dots:nth-child(3){
+	background-image: url(/img/icons/SS/asuna/BattleSkillIcon_106320.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.asuna_second_dots .dots:nth-child(4){
+	background-image: url(/img/icons/SS/asuna/BattleSkillIcon_106420.png);
+	background-position: center;
+	background-size: contain;
+  }
   .card-stack-carousel__card {
 	position: absolute;
 	width: 360px;
