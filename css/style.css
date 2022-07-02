@@ -19,7 +19,7 @@
 	  font-family: Cramaten;
 	  src: url(/font/Cramaten.ttf)
   }
-  @import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@100;200;300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&family=Poiret+One&display=swap');
+
   
   body{
 	background-color: #1e243a;
@@ -1908,30 +1908,19 @@ height: 70px;
 .info_metrika div:nth-child(2){
 	border-bottom: solid 1px #cbd5e0;
 }
-.info_metrika div:nth-child(5){
+.info_metrika div:nth-child(4){
 	border-bottom: solid 1px #cbd5e0;
 }
-.info_metrika div:nth-child(6){
+.info_metrika div:nth-child(5){
 	border-bottom: solid 1px #cbd5e0;
 }
 .info_metrika span{
 	float: right;
 }
-.info_metrika hr{
-	position: absolute;
-	transform: rotate(90deg);
-	background: radial-gradient(circle, rgba(203,213,224,1) 25%, rgba(203,213,224,0.04245448179271705) 100%);
-	height: 1px;
-	width: 150px;
-	border: none;
-	margin: 2px auto;
-	top: 78px;
-	left: 285px;
-}
 .info_giftfood_wrapper{
 	width: 100%;
 	height: auto;
-	padding: 10px 0;
+	padding: 20px 0;
 	
 }
 .info_giftfood{
@@ -1939,7 +1928,6 @@ height: 70px;
 	height: auto;
 	border-radius: 12px;
 	display: inline-block;
-	padding: 10px 0;
 }
 .info_giftfood img{
 	width: 55px;
@@ -1948,25 +1936,26 @@ height: 70px;
 }
 .dollfoods,
 .dollgift{
-	width: 350px;
+	width: 100%;
 	background-color: rgb(59, 69, 105);
 	height: fit-content;
 	border-radius: 12px;
-	padding: 5px 10px 10px 10px;
+	
 }
 .foodgift_content{
-	background-color: #1e243a;
+	position: relative;
 	border-radius: 12px;
-	padding-top: 10px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+	margin: 0 10px;
+	justify-content: center;
 }
 .dollgift{
-	float: right;
+
 }
 .dollfoods{
-	float: left;
+	margin-bottom: 20px;
 	text-align: center;
 }
 .dollfoods span,
@@ -1981,22 +1970,16 @@ height: 70px;
 }
 .food,
 .gift{
-	width: 50%;
-	height: 65px;
-	padding: 0 10px 10px 10px;
+	width: 20%;
+	height: 75px;
+	padding: 10px;
 	display: flex;
 	flex-direction: row;
+	border-bottom: 1px solid #636dca;
 }
-.dollfoods_title,
-.dollgift_title{
-	width: 100%;
-	height: fit-content;
-	text-align: center;
-	color: #cbd5e0;
-	font-family: eras;
-	font-size: 22px;
-	font-weight: 700;
-	padding: 0 5px 5px 5px;
+.noborder,
+.noborder div{
+	border: none;
 }
 .grey img{
 	background-image: url(/img/icons/Icon_Quality_1.png);
@@ -2029,12 +2012,9 @@ height: 70px;
 	border-radius: 12px;
 	margin-bottom: 20px;
 }
-.dollcg{
-	padding: 5px 10px 10px 10px;
-}
 .dollcg img{
-	max-width: 120px;
-	height: 97px;
+	max-width: 114px;
+	height: 92px;
 	border-radius: 12px;
 	transition: all .4s;
 	
@@ -2043,35 +2023,40 @@ height: 70px;
 #dollskinlist{
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	justify-content: center;
-	padding: 10px;
 	width: 100%;
 	list-style: none;
-	background-color: #1e243a;
 	border-radius: 12px;
 }
 #dollcglist a,
 #dollskinlist a{
 	width: fit-content;
-	height: 97px;
+	height: 92px;
 	padding-right: 10px;
+	margin: 10px 0;
 }
 #dollcglist a:last-child,
 #dollskinlist a:last-child{
 	padding-right: 0;
 	width: fit-content;
 }
+#dollcglist a:nth-child(6),
+#dollcglist a:nth-child(7){
+	margin: 0 0 10px 0;
+}
+
+#dollskinlist > a:nth-child(2) img,
+#dollskinlist > a:nth-child(4) img,
+#dollskinlist > a:nth-child(6) img,
+#dollskinlist > a:nth-child(8) img,
+#dollskinlist > a:nth-child(10) img,
+#dollskinlist > a:nth-child(12) img{
+	display: none;
+}
 .dollcg img:hover{
 	transform: scale(1.1);
 	transition: all .4s;
-}
-.dollcg_name{
-	width: 100%;
-	text-align: center;
-	color: #cbd5e0;
-	font-family: eras;
-	font-size: 22px;
-	font-weight: 700;
 }
 
 /*tierlist*/
@@ -2089,7 +2074,7 @@ height: 70px;
 	height: 100px;
 }
 .lightning_button img{
-height: 100%;
+	height: 100%;
 }
 .tierlist_table{
 	width: fit-content;
@@ -2314,8 +2299,5 @@ margin:20px 0 20px 50px;
 
 
 .hide{
-	display: none;
-}
-#dollskinlist > a:last-child img{
 	display: none;
 }
