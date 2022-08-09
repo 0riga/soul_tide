@@ -214,14 +214,14 @@ height: 70px;
 }
 .physical{
 	background-color: #718096;
-	color: #333;
+	color: #000;
 }
 .shadow{
-	background-color: #8f25f3a9;
-	color: #333;
+	background-color: #ba83eca9;
+	color: #000;
 }
 .fire {
-	background-color: #d83013be;
+	background-color: #d65039be;
 	color: #000;
 }
 .attacker{
@@ -332,7 +332,7 @@ height: 70px;
  transform: translateY(-50px);
  position: absolute;
  list-style: none;
- transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+ transition: .5s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .nacc_item.active {
@@ -915,6 +915,45 @@ height: 70px;
 	background-position: center;
 	background-size: contain;
   }
+  .card-stack-carousel__indicators.amane_dots .dots:nth-child(1){
+	background-image: url(/img/icons/SS/amane/BattleSkillIcon_124110.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.amane_dots .dots:nth-child(2){
+	background-image: url(/img/icons/SS/amane/BattleSkillIcon_124210.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.amane_dots .dots:nth-child(3){
+	background-image: url(/img/icons/SS/amane/BattleSkillIcon_124310.png);
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.amane_dots .dots:nth-child(4){
+	background-image: url(/img/icons/SS/amane/BattleSkillIcon_124410.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.amane_second_dots .dots:nth-child(1){
+	background-image: url(/img/icons/SS/amane/BattleSkillIcon_124120.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.amane_second_dots .dots:nth-child(2){
+	background-image: url(/img/icons/SS/amane/BattleSkillIcon_124220.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.amane_second_dots .dots:nth-child(3){
+	background-image: url(/img/icons/SS/amane/BattleSkillIcon_124320.png);
+	background-position: center;
+	background-size: contain;
+  }
+  .card-stack-carousel__indicators.amane_second_dots .dots:nth-child(4){
+	background-image: url(/img/icons/SS/amane/BattleSkillIcon_124420.png);
+	background-position: center;
+	background-size: contain;
+  }
   .card-stack-carousel__card {
 	position: absolute;
 	width: 360px;
@@ -1272,6 +1311,12 @@ height: 70px;
 	top: -90px;
 	left: -80px;
 }
+.trait_css > .freeze:after{
+	width: 175px;
+	height: 45px;
+	top: -70px;
+	left: -65px;
+}
 .tooltip:before,
 .tooltip:after{
 	position: absolute;
@@ -1291,7 +1336,13 @@ height: 70px;
 .frostbite:after,
 .frostrune:after,
 .lockedon:after,
-.neuralink:after{
+.neuralink:after,
+.sheen:after,
+.freeze::after,
+.eclipse::after,
+.aphotic::after,
+.fluffice:after,
+.fluffice_adv:after{
 	content: attr(data-tooltip);
 	background: rgb(59, 69, 105);
 	color: #fff;
@@ -1311,7 +1362,13 @@ height: 70px;
 .frostbite:before,
 .frostrune:before,
 .lockedon:before,
-.neuralink:before{
+.neuralink:before,
+.sheen:before,
+.freeze::before,
+.eclipse::before,
+.aphotic::before,
+.fluffice::before,
+.fluffice_adv:before{
 	border-width: 10px 8px 0 8px;
 	border-style: solid;
 	border-color: #cbd5e0 transparent transparent transparent;
@@ -1422,6 +1479,69 @@ height: 70px;
 .neuralink:before{
 	top: -5px;
 	left: 40px;
+}
+.sheen:after{
+	width: 220px;
+	height: 75px;
+	top: -100px;
+	left: -85px;
+	font-size: calc(10px * 1.25);
+	text-align: center;
+	letter-spacing: .8px;
+}
+.sheen:before{
+	top: -5px;
+	left: 25px;
+}
+.freeze::after{
+	width: 150px;
+	height: 35px;
+	top: -60px;
+	left: -55px;
+}
+.freeze::before{
+	top: -5px;
+	left: 25px;
+}
+.eclipse::after{
+	width: 150px;
+	height: 35px;
+	top: -60px;
+	left: -50px;
+}
+.eclipse::before{
+	top: -5px;
+	left: 25px;
+}
+.aphotic::after{
+	width: 195px;
+	height: 70px;
+	top: -95px;
+	left: -75px;
+}
+.aphotic::before{
+	top: -5px;
+	left: 25px;
+}
+.fluffice:after{
+	width: 150px;
+	height: 35px;
+	top: -60px;
+	left: -55px;
+}
+.fluffice::before{
+	top: -5px;
+	left: 25px;
+}
+.fluffice_adv:after{
+	width: 150px;
+	height: 45px;
+	top: -70px;
+	left: -55px;
+}
+.fluffice_adv:before{
+	top: -5px;
+	left: 25px;
 }
 .tooltip:hover:before,
 .tooltip:hover:after{
@@ -1854,16 +1974,154 @@ height: 70px;
 	font-family: eras;
 	font-size: 20px;
 }
-.skill_priotity_icon{
+.skill_priotity_icon_wrapper{
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: row;
 	padding: 10px;
 	justify-content: center;
 }
-.skill_priotity_icon img{
-	height: 50px;
+
+
+
+
+.skill_priotity_icon{
+	width: 60px;
+	height: 60px;
 	margin: 5px;
+	position: relative;
+	transition: all 0.5s ease;
+	list-style: none;
+  }
+  .layout{
+	transition: all 0.5s ease;
+  }
+  .layout img{
+	z-index: 5;
+	position: relative;
+  }
+  .layout:before{
+	content: attr(data-name);
+	position: absolute;
+	opacity: 1;
+	font-style: normal;
+	background-color: rgb(59, 69, 105);
+	min-width: 120px;
+	width: fit-content;
+	height: 65px;
+	top: -5px;
+	left: -10px;
+	border-radius: 50px;
+	color: #cbd5e0;
+	font-family: eras;
+	font-size: 20px;
+	border: #cbd5e0 1px solid;
+	z-index: -3;
+	padding-left: 70px;
+	padding-right: 25px;
+	padding-top: 5px;
+	white-space: pre;
+	overflow: hidden;
+  }
+  .layout:after{
+	content: attr(data-type);
+	position: absolute;
+	bottom: 3px;
+	color: #cbd5e0;
+	font-family: eras;
+	font-size: 16px;
+	z-index: -3;
+	padding: 3px 8px;
+	border: 1px solid #cbd5e0;
+	color: #cbd5e0;
+    border-radius: 10px;
+	font-family: eras;
+	letter-spacing: 1px;
+	margin-left: 5px;
+	width: 100px;
+	opacity: 1;
+	overflow: hidden;
+  }
+  .layout:hover:before,
+  .layout:hover:after{
+	z-index: 3;
+  }
+
+  .skill_priotity_icon img{
+	width: 100%;
+	vertical-align: top;
+	border-radius:  12px;
+}
+
+  .hideed_parts{
+	display: none;
+	flex-direction: row;
+
+	
+
+  }
+  .hideed_parts img{
+	width: 60px;
+	
+	
+  }
+  .skill_priotity_icon .mask{
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+
+  }
+  .skill_priotity_icon_descr{
+	width: 100%;
+	height: 100%;
+  }
+
+  .skill_priotity_icon_descr_img{
+
+	position: absolute;	
+
+	z-index: 3;
+
+  }
+  .skill_priotity_icon_descr_img img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+  }
+  .skill_priotity_icon_descr_text{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(59, 69, 105);
+	position: absolute;
+	border-radius: 0 0 12px 12px;
+	top: 30px;
+	left: -20px;
+	border: 1px solid #cbd5e0;
+  }
+  .skill_priotity_icon_descr_text > p{
+	position: relative;
+	top: 30px;
+	color: #cbd5e0;
+	font-weight: 700;
+	font-family: eras;
+  }
+  .skill_priotity_icon_descr_text > span{
+	position: relative;
+	top: 35px;
+  	width: fit-content;
+ 	font-size: calc(13px / 1.25);
+  	margin: 0 5px;
+  	padding: 3px 8px;
+  	border: 1px solid #cbd5e0;
+  	color: #cbd5e0;
+ 	border-radius: 10px;
+  	font-family: eras;
+  	font-weight: 700;
+  	letter-spacing: 1px;
+  	display: inline-block;
 }
 
 /*4 вкладка*/
@@ -2008,9 +2266,12 @@ height: 70px;
 .dollcg_wrapper{
 	width: 100%;
 	height: fit-content;
+	
+	padding-bottom: 20px;
+}
+.dollcg{
 	background-color: rgb(59, 69, 105);
 	border-radius: 12px;
-	margin-bottom: 20px;
 }
 .dollcg img{
 	max-width: 114px;

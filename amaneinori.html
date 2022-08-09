@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Amane Inori</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/img/favicon/site.webmanifest">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+		integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+		crossorigin="anonymous" />
+	<link rel="stylesheet" href="/lib/js/gallery/css/lightgallery.css">
+	<link rel="stylesheet" href="/lib/js/gallery/css/lg-thumbnail.css">
+	<link rel="stylesheet" href="/lib/js/gallery/css/lg-transitions.css">
+	<link rel="stylesheet" href="/lib/js/gallery/css/lg-zoom.css">
+	<link rel="stylesheet" href="/lib/js/gallery/css/lg-fullscreen.css">
+	<script src="https://cubism.live2d.com/sdk-web/cubismcore/live2dcubismcore.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/dylanNew/live2d/webgl/Live2D/lib/live2d.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/pixi.js@5.3.6/dist/pixi.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display/dist/index.min.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="header_wrapper">
+			<div class="header">
+				<div class="header_navwrap">
+					<div class="header_navbar">
+						<a href="/" class="header_navitem">Куклы</a>
+						<a href="/tierlist.html" class="header_navitem separator">Тир-лист</a>
+						<a href="" class="header_navitem separator">Полезное</a>
+					</div>
+					<div class="header_logo">
+						<a href="">
+							<img src="/img/logo_custom3.png" alt="">
+						</a>
+					</div>
+					<div class="vk_link">
+						<a href="https://vk.com/soultideru" target="_blank">
+							<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50"
+								viewBox="0 0 64 64">
+								<path
+									d="M48,7H16c-4.418,0-8,3.582-8,8v32c0,4.418,3.582,8,8,8h32c4.418,0,8-3.582,8-8V15C56,10.582,52.418,7,48,7z M42.323,42 c-1.219-3.804-4.257-6.747-8.275-7.147V42h-0.62C22.496,42,16.26,34.492,16,22h5.477c0.18,9.169,4.217,13.053,7.415,13.854V22 h5.157v7.908c3.158-0.34,6.476-3.944,7.595-7.908h5.157c-0.859,4.885-4.457,8.488-7.016,9.97C42.343,33.171,46.441,36.314,48,42 H42.323z">
+								</path>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper_main">
+			<div class="content">
+				<div class="main_detail">
+					<div class="live2d">
+						<canvas id=canvas></canvas>
+					</div>
+					<div class="dollinfo_wrapper">
+						<div class="dollinfo">
+							<div class="gc gc--1-of-3">
+								<div class="dollinfo_tabs_menu">
+									<div class="hvr-shadow-radial active"><span>Amane Inori</span></div>
+									<div class="hvr-shadow-radial"><span>Умения</span></div>
+									<div class="hvr-shadow-radial"><span>Рекомендации</span></div>
+									<div class="hvr-shadow-radial"><span>Инфо</span></div>
+								</div>
+							</div>
+							<div class="gc gc--2-of-3">
+								<ul class="nacc">
+									<li class="nacc_item active">
+										<div class="aboutdoll">
+											<div class="aboutdoll_name">
+												Amane Inori <br>
+												<span>Azure Wings</span>
+											</div>
+											<div class="aboutdoll_descr_wrapper">
+												<div class="aboutdoll_descr">
+													<p>
+														Амане Инори, молодая девушка, которая вот-вот должна была
+														поступить в старшую школу, резко меняет свою жизнь в своей
+														юности, когда ее вызывают в Континент Полумесяца. Инори
+														становится зрелой женщиной в другом мире, и, несмотря на свой
+														нежный и восторженный нрав, она ангел с яркой личностью
+														и, что забавно, гурман...
+													</p>
+												</div>
+												<div class="dollstats_wrapper">
+													<div class="dollstats">
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_7.png" alt="">
+															</div>
+															<div class="stat_name">ATK</div>
+															<div class="stat_value">46</div>
+														</div>
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_9.png" alt="">
+															</div>
+															<div class="stat_name">HP</div>
+															<div class="stat_value">238</div>
+														</div>
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_10.png" alt="">
+															</div>
+															<div class="stat_name">SPD</div>
+															<div class="stat_value">38</div>
+														</div>
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_11.png" alt="">
+															</div>
+															<div class="stat_name">DEF</div>
+															<div class="stat_value">19</div>
+														</div>
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_14.png" alt="">
+															</div>
+															<div class="stat_name">SP</div>
+															<div class="stat_value">30</div>
+														</div>
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_22.png" alt="">
+															</div>
+															<div class="stat_name">EVA</div>
+															<div class="stat_value">0%</div>
+														</div>
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_24.png" alt="">
+															</div>
+															<div class="stat_name">CRIT</div>
+															<div class="stat_value">5%</div>
+														</div>
+														<div class="stats">
+															<div class="stat_icon">
+																<img src="/img/icons/MainAtt_26.png" alt="">
+															</div>
+															<div class="stat_name">CRIT DMG</div>
+															<div class="stat_value">150%</div>
+														</div>
+													</div>
+													<div class="dollsd">
+														<img src="/img/SD/amane.gif" alt="">
+													</div>
+												</div>
+												<div class="dolltraits">
+
+													<div class="traits">
+														<div class="traitone trait_css">
+															<div class="traitname">
+																Особенность
+																<img src="/img/icons/attacker.png" alt="">
+																Angel of Retribution
+															</div>
+															В начале каждого хода наносит 3 стака <span
+																id="amane_traits_one"><span class="tooltip sheen"
+																	data-tooltip="При нанесении урона атрибутом Тени, снимается 1 стак Sheen с цели, увеличивая получаемый целью урон на 5%, складывается до 6 раз.">Sheen</span>
+																случайному противнику в заднем ряду.</span>
+														</div>
+														<div class="traittwo trait_css">
+															<div class="traitname">
+																Особенность
+																<img src="/img/icons/support.png" alt="">
+																Angel of Salvation
+															</div>
+															Когда ваш отряд накладывает <span class="tooltip freeze"
+																data-tooltip="Невозможно действовать. Увеличивает получаемый урон на 10%.">Freeze</span>,
+															увеличивает накладываемое лечение Инори на <span
+																id="amane_traits_two">3</span>%, суммируется до 4 раз.
+														</div>
+														<div class="progressbar">
+															<img src="/img/icons/ComToggle_86.png" alt="">
+															<img class="icon_blink" src="/img/icons/ComToggle_87.png"
+																alt="">
+															<img class="icon_blink" src="/img/icons/ComToggle_87.png"
+																alt="">
+															<img class="icon_blink" src="/img/icons/ComToggle_87.png"
+																alt="">
+															<img class="icon_blink" src="/img/icons/ComToggle_87.png"
+																alt="">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</li>
+									<li class="nacc_item">
+										<div>
+											<div class="doll_skillsets_wrapper">
+												<div class="doll_skillsets_menu">
+
+													<div class="menu_item active first_ss">
+														<div class="ss_icon">
+															<img src="/img/icons/SS/amane/BattleSkillGroupIcon_2401.png"
+																alt="">
+														</div>
+														<div class="ss_descr">
+															<p>Last Glow</p>
+															<hr>
+															<div class="type_skillset shadow">
+																Shadoow
+															</div>
+															<div class="type_skillset attacker">
+																Attacker
+															</div>
+														</div>
+													</div>
+													<div class="menu_item second_ss">
+														<div class="ss_icon">
+															<img src="/img/icons/SS/amane/BattleSkillGroupIcon_2402.png"
+																alt="">
+														</div>
+														<div class="ss_descr">
+															<p>Ice Mirage</p>
+															<hr>
+															<div class="type_skillset frost">
+																Frost
+															</div>
+															<div class="type_skillset attacker">
+																Supporter
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="doll_skilsets first_tab active">
+													<div class="skillset_skills_wrapper card-stack-carousel"
+														data-interval="false">
+														<div class="skillset_skills">
+															<div class="skill card-stack-carousel__card active">
+																<div class="skilldescr_wrapper firstsswrapper active">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/amane/BattleSkillIcon_124110.png"
+																				alt="">
+																		</div>
+																		<div class="selecforname">
+																			<p>Amane Orb</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option one">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<hr>
+																		<span class="type">Basic</span><span
+																			class="cost">Стоимость: 0 SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>Атакует противника атрибутом Тени,
+																			наносит 100% от ATK.</span>
+																	</div>
+																</div>
+															</div>
+															<div class="skill card-stack-carousel__card">
+																<div class="skilldescr_wrapper firstsswrapper">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/amane/BattleSkillIcon_124210.png"
+																				alt="">
+																		</div>
+																		<div class="selecforname">
+																			<p>Amane Beam</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option two">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+
+																		</div>
+																		<hr>
+																		<span class="type">Core</span><span
+																			class="cost">Стоимость: <span
+																				class="sp_count">20 </span> SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>Атакует противника атрибутом Тени 2 раза,
+																			нанося 2 * 75% от ATK и снижает ATK цели на
+																			10% на 2 хода.</span>
+																	</div>
+																</div>
+															</div>
+															<div class="skill card-stack-carousel__card">
+																<div class="skilldescr_wrapper firstsswrapper">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/amane/BattleSkillIcon_124310.png"
+																				alt="">
+																		</div>
+																		<div class="selecforname">
+																			<p>Amane Radiance</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option three">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<hr>
+																		<span class="type">Special</span><span
+																			class="cost">Стоимость: 30 SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>Атакует противника атрибутом Тени, наносит
+																			175% от АТК и увеличивает получаемый целью
+																			урон атрибута Тени на 10% на 2 хода.</span>
+																	</div>
+																</div>
+															</div>
+															<div class="skill card-stack-carousel__card">
+																<div class="skilldescr_wrapper firstsswrapper">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/amane/BattleSkillIcon_124410.png"
+																				alt="">
+																		</div>
+																		<div class="skillpreview">
+																			<div class="ultimatepreview modal__button"
+																				id="open-modal">
+																			</div>
+																		</div>
+																		<div class="selecforname">
+																			<p>Amane Nova</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option four">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<hr>
+																		<span class="type">Ultimate</span><span
+																			class="cost">Стоимость: <span
+																				class="sp_count"> 80 </span>SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>Атакует противника атрибутом Тени, нанося
+																			300% от ATK и накладывает <span
+																				class="tooltip aphotic"
+																				data-tooltip="В конце хода противник получает доп урон равный 10% суммарного урона Тьмой полученного за ход. Урон понижается на 5% за каждый удар, при нанесении более 4 ударов за ход.">Aphotic</span>.</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="card-stack-carousel__indicators amane_dots">
+															<div class="dots"><a href="#0"></a></div>
+															<div class="dots"><a href="#1"></a></div>
+															<div class="dots"><a href="#2"></a></div>
+															<div class="dots"><a href="#3"></a></div>
+														</div>
+													</div>
+												</div>
+												<div class="doll_skilsets second_tab">
+													<div class="skillset_skills_wrapper card-stack-carousel"
+														data-interval="false">
+														<div class="skillset_skills">
+															<div class="skill card-stack-carousel__card active">
+																<div class="skilldescr_wrapper firstsswrapper active">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/amane/BattleSkillIcon_124120.png"
+																				alt="">
+																		</div>
+																		<div class="selecforname">
+																			<p>Amane Flake</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option five">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<hr>
+																		<span class="type">Basic</span><span
+																			class="cost">Стоимость: 0 SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>Лечит куклу на 60% от ATK.</span>
+																	</div>
+																</div>
+															</div>
+															<div class="skill card-stack-carousel__card">
+																<div class="skilldescr_wrapper firstsswrapper">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/amane/BattleSkillIcon_124220.png"
+																				alt="">
+																		</div>
+																		<div class="selecforname">
+																			<p>Amane Blizzard</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option six">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+
+																		</div>
+																		<hr>
+																		<span class="type">Core</span><span
+																			class="cost">Стоимость: <span
+																				class="sp_count">20 </span> SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>Атакует противников в первом ряду
+																			атрибутом холода, нанося 90% от ATK и
+																			увеличивает наносимый отрядом урон атрибута
+																			холода на 10% на 2 хода.</span>
+																	</div>
+																</div>
+															</div>
+															<div class="skill card-stack-carousel__card">
+																<div class="skilldescr_wrapper firstsswrapper">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/amane/BattleSkillIcon_124320.png"
+																				alt="">
+																		</div>
+																		<div class="selecforname">
+																			<p>Amane Bless</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option seven">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<hr>
+																		<span class="type">Special</span><span
+																			class="cost">Стоимость: <span
+																				class="sp_count">40 </span> SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>Лечит отряд на 55% от ATK и увеличивает
+																			лечение на 5% за каждого противника с <span
+																				class="tooltip freeze"
+																				data-tooltip="Невозможно действовать. Увеличивает получаемый урон на 10%.">Freeze</span>.</span>
+																	</div>
+																</div>
+															</div>
+															<div class="skill card-stack-carousel__card">
+																<div class="skilldescr_wrapper firstsswrapper">
+																	<div class="skillname">
+																		<div class="skillimg">
+																			<img src="/img/icons/SS/amane/BattleSkillIcon_124420.png"
+																				alt="">
+																		</div>
+																		<div class="skillpreview">
+																			<div class="ultimatepreview modal__button"
+																				id="open-modal-two">
+																			</div>
+																		</div>
+																		<div class="selecforname">
+																			<p>Amane Caress</p>
+																			<div class="skilllelvel">
+																				<div class="dropdown notclicable">
+																					<input type="text" class="textbox"
+																						placeholder="+"
+																						readonly></input>
+																					<div class="option eight">
+																						<div value='+'>+0
+																						</div>
+																						<div value='+1'>+1
+																						</div>
+																						<div value='+2'>+2
+																						</div>
+																						<div value='+3'>+3
+																						</div>
+																						<div value='+4'>+4
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																		<hr>
+																		<span class="type">Ultimate</span><span
+																			class="cost">Стоимость: <span
+																				class="sp_count">80 </span> SP</span>
+																	</div>
+																	<div class="skilldescr">
+																		<span>Покрывает все поле <span
+																				class="tooltip chill"
+																				data-tooltip="Только одна аура может одновременно быть на поле.">Ice
+																				Aura</span> на 2 хода. Во время Ice
+																			Aura, когда Кукла атакует, то получает <span
+																				class="tooltip fluffice"
+																				data-tooltip="Невозможно действовать. Нельза отразить и снять очищением.">Fluff
+																				Ice</span> на 1 ход, а враг получает
+																			доп. урон атрибутом холода в размере 15% от
+																			АТК Инори. Когда отряд наносит урон
+																			атрибутом холода, накладывает на врага <span
+																				class="tooltip freeze"
+																				data-tooltip="Невозможно действовать. Увеличивает получаемый урон на 10%.">Freeze</span>
+																			на 1 ход с вероятностью в 50%.</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="card-stack-carousel__indicators amane_second_dots">
+															<div class="dots"><a href="#0"></a></div>
+															<div class="dots"><a href="#1"></a></div>
+															<div class="dots"><a href="#2"></a></div>
+															<div class="dots"><a href="#3"></a></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="nacc_item">
+										<div class="recommendation_wrap">
+											<div class="recommendation">
+												<div class="recommendation_verves">
+													<div class="recommendation_verves_title">
+														Рекомендованные карты (Verves)
+													</div>
+													<div class="verves_images_wrapper">
+														<div class="verves_images">
+															<ul class="verves_list">
+																<li class="verves_item">
+																	<div class="inner"><img
+																			src="/img/verves/Equip_HeadIcon_SSR_16.png"
+																			alt="">
+																		<div class="mask"></div>
+																	</div>
+																	<div class="inner hideed"><img
+																			src="/img/verves/Equip_Icon_SSR_16.png"
+																			alt="">
+																		<div class="mask"></div>
+																		<div class="details_button">
+																			<img src="/img/TownLibraryUI_Image_97.png"
+																				alt="">
+																		</div>
+																		<div class="details">
+																			<div class="verve_name">
+																				<span>Elusive Wind</span>
+																			</div>
+																			<hr>
+																			<div class="verve_stats">
+																				<div class="verve_stats_atk">
+																					<img src="/img/icons/MainAtt_7.png"
+																						alt="">
+																					<span>38</span>
+																				</div>
+																				<div class="verve_stats_hp">
+																					<img src="/img/icons/MainAtt_9.png"
+																						alt="">
+																					<span>147</span>
+																				</div>
+																				<div class="verve_stats_def">
+																					<img src="/img/icons/MainAtt_11.png"
+																						alt="">
+																					<span>12</span>
+																				</div>
+																			</div>
+																			<div class="section_name">
+																				<img src="/img/icons/ComLine_13.png"
+																					alt="">
+																				<span>Пассивное умение</span>
+																				<img src="/img/icons/ComLine_05.png"
+																					alt="">
+																			</div>
+																			<div class="passiveskill_verve">
+																				SPD + 16
+																			</div>
+																			<div class="section_name_traits">
+																				<img src="/img/icons/ComLine_13.png"
+																					alt="">
+																				<span>Особенность</span>
+																				<img src="/img/icons/ComLine_05.png"
+																					alt="">
+																			</div>
+																			<div class="verve_traits">
+																				Повышает Атаку носителя на 0,6% / 0,7% /
+																				0,9% / 1,2% / 1,5% за каждого юнита,
+																				который ещё не ходил в этом раунде.
+																			</div>
+																		</div>
+																	</div>
+																</li>
+																<li class="verves_item">
+																	<div class="inner">
+																		<img src="/img/verves/Equip_HeadIcon_SSR_24.png"
+																			alt="">
+																		<div class="mask"></div>
+																	</div>
+																	<div class="inner hideed"><img
+																			src="/img/verves/Equip_Icon_SSR_24.png"
+																			alt="">
+																		<div class="mask"></div>
+																		<div class="details_button">
+																			<img src="/img/TownLibraryUI_Image_97.png"
+																				alt="">
+																		</div>
+																		<div class="details">
+																			<div class="verve_name">
+																				<span>Obsidian Knight</span>
+																			</div>
+																			<hr>
+																			<div class="verve_stats">
+																				<div class="verve_stats_atk">
+																					<img src="/img/icons/MainAtt_7.png"
+																						alt="">
+																					<span>38</span>
+																				</div>
+																				<div class="verve_stats_hp">
+																					<img src="/img/icons/MainAtt_9.png"
+																						alt="">
+																					<span>147</span>
+																				</div>
+																				<div class="verve_stats_def">
+																					<img src="/img/icons/MainAtt_11.png"
+																						alt="">
+																					<span>12</span>
+																				</div>
+																			</div>
+																			<div class="section_name">
+																				<img src="/img/icons/ComLine_13.png"
+																					alt="">
+																				<span>Пассивное умение</span>
+																				<img src="/img/icons/ComLine_05.png"
+																					alt="">
+																			</div>
+																			<div class="passiveskill_verve">
+																				SPD + 16
+																			</div>
+																			<div class="section_name_traits">
+																				<img src="/img/icons/ComLine_13.png"
+																					alt="">
+																				<span>Особенность</span>
+																				<img src="/img/icons/ComLine_05.png"
+																					alt="">
+																			</div>
+																			<div class="verve_traits">
+																				Когда носитель наносит прямой урон
+																				врагам, не действовавшим в этом раунде,
+																				снижает Защиту цели на 3% / 4% / 5% / 6%
+																				/ 8% в течение 2 раундов.
+																			</div>
+																		</div>
+																	</div>
+																</li>
+																<li class="verves_item">
+																	<div class="inner"><img
+																			src="/img/verves/Equip_HeadIcon_SR_16.png"
+																			alt="">
+																		<div class="mask"></div>
+																	</div>
+																	<div class="inner hideed"><img
+																			src="/img/verves/Equip_Icon_SR_16.png"
+																			alt="">
+																		<div class="mask"></div>
+																		<div class="details_button">
+																			<img src="/img/TownLibraryUI_Image_97.png"
+																				alt="">
+																		</div>
+																		<div class="details">
+																			<div class="verve_name">
+																				<span>Dragon Hunter</span>
+																			</div>
+																			<hr>
+																			<div class="verve_stats">
+																				<div class="verve_stats_atk">
+																					<img src="/img/icons/MainAtt_7.png"
+																						alt="">
+																					<span>18</span>
+																				</div>
+																				<div class="verve_stats_hp">
+																					<img src="/img/icons/MainAtt_9.png"
+																						alt="">
+																					<span>72</span>
+																				</div>
+																				<div class="verve_stats_def">
+																					<img src="/img/icons/MainAtt_11.png"
+																						alt="">
+																					<span>6</span>
+																				</div>
+																			</div>
+																			<div class="section_name">
+																				<img src="/img/icons/ComLine_13.png"
+																					alt="">
+																				<span>Пассивное умение</span>
+																				<img src="/img/icons/ComLine_05.png"
+																					alt="">
+																			</div>
+																			<div class="passiveskill_verve">
+																				SPD + 12
+																			</div>
+																			<div class="section_name_traits">
+																				<img src="/img/icons/ComLine_13.png"
+																					alt="">
+																				<span>Особенность</span>
+																				<img src="/img/icons/ComLine_05.png"
+																					alt="">
+																			</div>
+																			<div class="verve_traits">
+																				Повышает наносимый урон на 8% / 10% /
+																				12% / 15% против каждого врага, который
+																				не ходил в этом раунде.
+																			</div>
+																		</div>
+																	</div>
+																</li>
+																<li class="verves_item">
+																	<div class="inner"><img
+																			src="/img/verves/Equip_HeadIcon_SSR_29.png"
+																			alt="">
+																		<div class="mask"></div>
+																	</div>
+																	<div class="inner hideed"><img
+																			src="/img/verves/Equip_Icon_SSR_29.png"
+																			alt="">
+																		<div class="mask"></div>
+																		<div class="details_button">
+																			<img src="/img/TownLibraryUI_Image_97.png"
+																				alt="">
+																		</div>
+																		<div class="details">
+																			<div class="verve_name">
+																				<span>Majestic Mage</span>
+																			</div>
+																			<hr>
+																			<div class="verve_stats">
+																				<div class="verve_stats_atk">
+																					<img src="/img/icons/MainAtt_7.png"
+																						alt="">
+																					<span>38</span>
+																				</div>
+																				<div class="verve_stats_hp">
+																					<img src="/img/icons/MainAtt_9.png"
+																						alt="">
+																					<span>147</span>
+																				</div>
+																				<div class="verve_stats_def">
+																					<img src="/img/icons/MainAtt_11.png"
+																						alt="">
+																					<span>12</span>
+																				</div>
+																			</div>
+																			<div class="section_name">
+																				<img src="/img/icons/ComLine_13.png"
+																					alt="">
+																				<span>Пассивное умение</span>
+																				<img src="/img/icons/ComLine_05.png"
+																					alt="">
+																			</div>
+																			<div class="passiveskill_verve">
+																				SP +8
+																			</div>
+																			<div class="section_name_traits">
+																				<img src="/img/icons/ComLine_13.png"
+																					alt="">
+																				<span>Особенность</span>
+																				<img src="/img/icons/ComLine_05.png"
+																					alt="">
+																			</div>
+																			<div class="verve_traits">
+																				В начале боя носитель получает 8 / 12 /
+																				16 / 20 / 24 SP.
+																			</div>
+																		</div>
+																	</div>
+																</li>
+																<li class="verves_item">
+																	<div class="inner"><img
+																			src="/img/verves/Equip_HeadIcon_SSR_10.png"
+																			alt="">
+																		<div class="mask"></div>
+																	</div>
+																	<div class="inner hideed "><img
+																			src="/img/verves/Equip_Icon_SSR_10.png"
+																			alt="">
+																		<div class="mask"></div>
+																		<div class="details_button">
+																			<img src="/img/TownLibraryUI_Image_97.png"
+																				alt="">
+																		</div>
+																		<div class="details">
+																			<div class="verve_name">
+																				<span>Hellsing</span>
+																			</div>
+																			<hr>
+																			<div class="verve_stats">
+																				<div class="verve_stats_atk">
+																					<img src="/img/icons/MainAtt_7.png"
+																						alt="">
+																					<span>38</span>
+																				</div>
+																				<div class="verve_stats_hp">
+																					<img src="/img/icons/MainAtt_9.png"
+																						alt="">
+																					<span>147</span>
+																				</div>
+																				<div class="verve_stats_def">
+																					<img src="/img/icons/MainAtt_11.png"
+																						alt="">
+																					<span>12</span>
+																				</div>
+																			</div>
+																			<div class="section_name">
+																				<img src="/img/icons/ComLine_13.png"
+																					alt="">
+																				<span>Пассивное умение</span>
+																				<img src="/img/icons/ComLine_05.png"
+																					alt="">
+																			</div>
+																			<div class="passiveskill_verve">
+																				SP +8
+																			</div>
+																			<div class="section_name_traits">
+																				<img src="/img/icons/ComLine_13.png"
+																					alt="">
+																				<span>Особенность</span>
+																				<img src="/img/icons/ComLine_05.png"
+																					alt="">
+																			</div>
+																			<div class="verve_traits">
+																				В начале каждого раунда повышает
+																				наносимый носителем урон на 2% за каждые
+																				20 / 18 / 15 / 12 / 8 SP, которые у неё
+																				есть
+																			</div>
+																		</div>
+																	</div>
+																</li>
+																<li class="verves_item">
+																	<div class="inner"><img
+																			src="/img/verves/Equip_HeadIcon_SSR_22.png"
+																			alt="">
+																		<div class="mask"></div>
+																	</div>
+																	<div class="inner hideed "><img
+																			src="/img/verves/Equip_Icon_SSR_22.png"
+																			alt="">
+																		<div class="mask"></div>
+																		<div class="details_button">
+																			<img src="/img/TownLibraryUI_Image_97.png"
+																				alt="">
+																		</div>
+																		<div class="details">
+																			<div class="verve_name">
+																				<span>Child of Old God</span>
+																			</div>
+																			<hr>
+																			<div class="verve_stats">
+																				<div class="verve_stats_atk">
+																					<img src="/img/icons/MainAtt_7.png"
+																						alt="">
+																					<span>37</span>
+																				</div>
+																				<div class="verve_stats_hp">
+																					<img src="/img/icons/MainAtt_9.png"
+																						alt="">
+																					<span>147</span>
+																				</div>
+																				<div class="verve_stats_def">
+																					<img src="/img/icons/MainAtt_11.png"
+																						alt="">
+																					<span>12</span>
+																				</div>
+																			</div>
+																			<div class="section_name">
+																				<img src="/img/icons/ComLine_13.png"
+																					alt="">
+																				<span>Пассивное умение</span>
+																				<img src="/img/icons/ComLine_05.png"
+																					alt="">
+																			</div>
+																			<div class="passiveskill_verve">
+																				ATK +4%
+																			</div>
+																			<div class="section_name_traits">
+																				<img src="/img/icons/ComLine_13.png"
+																					alt="">
+																				<span>Особенность</span>
+																				<img src="/img/icons/ComLine_05.png"
+																					alt="">
+																			</div>
+																			<div class="verve_traits">
+																				После того, как носитель исцеляет
+																				кого-либо, повышает ATK кукле с самой
+																				высокой ATK на 6% / 8% / 10% / 12% / 15%
+																				в течение 2 раундов
+																			</div>
+																		</div>
+																	</div>
+																</li>
+																<li class="verves_item">
+																	<div class="inner"><img
+																			src="/img/verves/Equip_HeadIcon_SSR_11.png"
+																			alt="">
+																		<div class="mask"></div>
+																	</div>
+																	<div class="inner hideed "><img
+																			src="/img/verves/Equip_Icon_SSR_11.png"
+																			alt="">
+																		<div class="mask"></div>
+																		<div class="details_button">
+																			<img src="/img/TownLibraryUI_Image_97.png"
+																				alt="">
+																		</div>
+																		<div class="details">
+																			<div class="verve_name">
+																				<span>Apple IV</span>
+																			</div>
+																			<hr>
+																			<div class="verve_stats">
+																				<div class="verve_stats_atk">
+																					<img src="/img/icons/MainAtt_7.png"
+																						alt="">
+																					<span>37</span>
+																				</div>
+																				<div class="verve_stats_hp">
+																					<img src="/img/icons/MainAtt_9.png"
+																						alt="">
+																					<span>147</span>
+																				</div>
+																				<div class="verve_stats_def">
+																					<img src="/img/icons/MainAtt_11.png"
+																						alt="">
+																					<span>12</span>
+																				</div>
+																			</div>
+																			<div class="section_name">
+																				<img src="/img/icons/ComLine_13.png"
+																					alt="">
+																				<span>Пассивное умение</span>
+																				<img src="/img/icons/ComLine_05.png"
+																					alt="">
+																			</div>
+																			<div class="passiveskill_verve">
+																				Накладываемое лечение +8%
+																			</div>
+																			<div class="section_name_traits">
+																				<img src="/img/icons/ComLine_13.png"
+																					alt="">
+																				<span>Особенность</span>
+																				<img src="/img/icons/ComLine_05.png"
+																					alt="">
+																			</div>
+																			<div class="verve_traits">
+																				Исцеление носителем одной цели имеет 40%
+																				/ 50% / 64% / 80% / 100% шанс снять 1
+																				негативный эффект, а исцеление по
+																				площади — 20 % / 25% / 32% / 40% / 50%
+																				шанс.
+																			</div>
+																		</div>
+																	</div>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="recommendation_skill">
+													<div class="recommendation_skill_title">
+														Приоритет прокачки умений
+													</div>
+													<div class="skill_priotity_wrapper">
+														<div class="skill_priotity high_priority">
+															<span>Высокий</span>
+															<ul class="skill_priotity_icon_wrapper">
+																<li class="skill_priotity_icon">
+																	<div class="skill_priotity_icon_inner">
+																		<img src="/img/icons/SS/amane/BattleSkillIcon_124410.png"
+																			alt="">
+																		<div class="mask"></div>
+																	</div>
+																	<div class="skill_priotity_icon_inner hideed_parts">
+																		<div class="skill_priotity_icon_descr">
+																			<div class="skill_priotity_icon_descr_img">
+																				<img src="/img/icons/SS/amane/BattleSkillIcon_124410.png"
+																					alt="">
+																			</div>
+																			<div class="skill_priotity_icon_descr_text">
+																				<p>Amane Nova</p>
+																				<span class="type">Ultimate</span>
+																			</div>
+																		</div>
+																		<div class="mask"></div>
+																	</div>
+																</li>
+																<li class="skill_priotity_icon">
+																	<div class="skill_priotity_icon_inner">
+																		<img src="/img/icons/SS/amane/BattleSkillIcon_124420.png"
+																			alt="">
+																		<div class="mask"></div>
+																	</div>
+																	<div class="skill_priotity_icon_inner hideed_parts">
+																		<div class="skill_priotity_icon_descr">
+																			<div class="skill_priotity_icon_descr_img">
+																				<img src="/img/icons/SS/amane/BattleSkillIcon_124420.png"
+																					alt="">
+																			</div>
+																			<div class="skill_priotity_icon_descr_text">
+																				<p>Amane Caress</p>
+																				<span class="type">Ultimate</span>
+																			</div>
+																		</div>
+																		<div class="mask"></div>
+																	</div>
+																</li>
+															</ul>
+														</div>
+														<div class="skill_priotity middle_priority">
+															<span>Средний</span>
+															<div class="skill_priotity_icon_wrapper">
+																<div class="skill_priotity_icon">
+																	<img src="/img/icons/SS/amane/BattleSkillIcon_124210.png"
+																		alt="">
+																</div>
+																<div class="skill_priotity_icon">
+																	<img src="/img/icons/SS/amane/BattleSkillIcon_124310.png"
+																		alt="">
+																</div>
+																<div class="skill_priotity_icon">
+																	<img src="/img/icons/SS/amane/BattleSkillIcon_124120.png"
+																		alt="">
+																</div>
+																<div class="skill_priotity_icon">
+																	<img src="/img/icons/SS/amane/BattleSkillIcon_124220.png"
+																		alt="">
+																</div>
+															</div>
+														</div>
+														<div class="skill_priotity low_priority">
+															<span>Низкий</span>
+															<div class="skill_priotity_icon_wrapper">
+																<div data-name="Amane Orb" data-type="Basic"
+																	class="skill_priotity_icon">
+																	<img src="/img/icons/SS/amane/BattleSkillIcon_124110.png"
+																		alt="">
+																</div>
+																<div data-name="Amane Bless" data-type="Special" class="skill_priotity_icon">
+																	<img src="/img/icons/SS/amane/BattleSkillIcon_124320.png"
+																		alt="">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="nacc_item">
+										<div class="info_wrapper">
+											<div class="info">
+												<div class="info_metrika">
+													<div class="dollheight">Рост: <span>170 См</span></div>
+													<div class="dollweight">Вес: <span>55 Кг</span></div>
+													<div class="dollva">Сэйю: <span>Ichinose Kana</span></div>
+													<div class="dollbirthday">День рождения: <span>14 февраля</span>
+													</div>
+													<div class="dollage">Возраст: <span>??</span></div>
+													<div class="dollzodiac">Знак зодиака: <span>Водолей</span></div>
+												</div>
+												<div class="info_giftfood_wrapper">
+													<div class="info_giftfood">
+														<div class="dollfoods">
+															<div class="foodgift_content">
+																<div class="grey food">
+																	<img src="/img/icons/food/Item_Icon_Food_37.png"
+																		alt="">
+																	<span>80</span>
+																</div>
+																<div class="grey food">
+																	<img src="/img/icons/food/Item_Icon_Food_11.png"
+																		alt="">
+																	<span>80</span>
+																</div>
+																<div class="green food">
+																	<img src="/img/icons/food/Item_Icon_Food_44.png"
+																		alt="">
+																	<span>140</span>
+																</div>
+																<div class="green food">
+																	<img src="/img/icons/food/Item_Icon_Food_14.png"
+																		alt="">
+																	<span>140</span>
+																</div>
+																<div class="blue food">
+																	<img src="/img/icons/food/Item_Icon_Food_59.png"
+																		alt="">
+																	<span>200</span>
+																</div>
+																<div class="blue food noborder">
+																	<img src="/img/icons/food/Item_Icon_Food_47.png"
+																		alt="">
+																	<span>200</span>
+																</div>
+																<div class="purple food noborder">
+																	<img src="/img/icons/food/Item_Icon_Food_68.png"
+																		alt="">
+																	<span>320</span>
+																</div>
+																<div class="purple food noborder">
+																	<img src="/img/icons/food/Item_Icon_Food_26.png"
+																		alt="">
+																	<span>320</span>
+																</div>
+															</div>
+														</div>
+														<div class="dollgift">
+															<div class="foodgift_content noborder">
+																<div class="grey gift">
+																	<img src="/img/icons/gifts/Item_Icon_FormalGift_01_10.png"
+																		alt="">
+																	<span>40</span>
+																</div>
+																<div class="green gift">
+																	<img src="/img/icons/gifts/Item_Icon_FormalGift_02_06.png"
+																		alt="">
+																	<span>100</span>
+																</div>
+																<div class="blue gift">
+																	<img src="/img/icons/gifts/Item_Icon_FormalGift_02_10.png"
+																		alt="">
+																	<span>160</span>
+																</div>
+																<div class="blue gift">
+																	<img src="/img/icons/gifts/Item_Icon_FormalGift_03_10.png"
+																		alt="">
+																	<span>160</span>
+																</div>
+																<div class="purple gift">
+																	<img src="/img/icons/gifts/Item_Icon_FormalGift_04_02.png"
+																		alt="">
+																	<span>300</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="dollcg_wrapper">
+													<div class="dollcg">
+														<div id="dollcglist">
+															<a href="/img/CG/Amane/NewStory_AmaneInori_Big_1_1.png">
+																<img src="/img/CG/Amane/preview/NewStory_AmaneInori_Small_1_1.png"
+																	alt="">
+															</a>
+															<a href="/img/CG/Amane/NewStory_AmaneInori_Big_1_2.png">
+																<img src="/img/CG/Amane/preview/NewStory_AmaneInori_Small_01.png"
+																	alt="">
+															</a>
+															<a href="/img/CG/Amane/NewStory_AmaneInori_Big_2.png">
+																<img src="/img/CG/Amane/preview/NewStory_AmaneInori_Small_02.png"
+																	alt="">
+															</a>
+															<a href="/img/CG/Amane/NewStory_AmaneInori_Big_3_1.png">
+																<img src="/img/CG/Amane/preview/NewStory_AmaneInori_Small_03.png"
+																	alt="">
+															</a>
+															<a href="/img/CG/Amane/NewStory_AmaneInori_Big_3_2.png">
+																<img src="/img/CG/Amane/preview/NewStory_AmaneInori_Small_3_2.png"
+																	alt="">
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal__container" id="modal-container">
+		<div class="modal__content">
+			<div class="modal__close close-modal" title="Close">
+				<i class="fas fa-times"></i>
+			</div>
+			<video id="video" controls="controls" controlslist="nodownload" disablepictureinpicture
+				src="/video/Amane1.mp4"></video>
+		</div>
+	</div>
+	<div class="modal__container" id="modal-container-two">
+		<div class="modal__content">
+			<div class="modal__close close-modal" title="Close">
+				<i class="fas fa-times"></i>
+			</div>
+			<video id="videotwo" controls="controls" controlslist="nodownload" disablepictureinpicture
+				src="/video/Amane2.mp4"></video>
+		</div>
+	</div>
+	<div class="modal_test_wrap">
+
+	</div>
+	<script src="/lib/js/amane_live2d.js"></script>
+	<script src="/lib/js/tabs.js"></script>
+	<script src="/lib/js/progressbar_amane.js"></script>
+	<script src="/lib/js/carousel.js"></script>
+	<script src="/lib/js/amane_skills.js"></script>
+	<script src="/lib/js/modal_video.js"></script>
+	<script src="/lib/js/verves.js"></script>
+	<script src="/lib/js/test.js"></script>
+	<script src="/lib/js/gallery/lightgallery.min.js"></script>
+	<script src="/lib/js/gallery/plugins/thumbnail/lg-thumbnail.min.js"></script>
+	<script src="/lib/js/gallery/plugins/zoom/lg-zoom.min.js"></script>
+	<script src="/lib/js/gallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+	<script type="text/javascript">
+		lightGallery(document.getElementById('dollcglist', 'dollskinlist'), {
+			mode: 'lg-lollipop-rev',
+			plugins: [lgZoom, lgThumbnail, lgFullscreen],
+			speed: 500,
+		});
+	</script>
+	<script type="text/javascript">
+		lightGallery(document.getElementById('dollskinlist'), {
+			mode: 'lg-lollipop-rev',
+			plugins: [lgZoom, lgThumbnail, lgFullscreen],
+			speed: 500,
+		});
+	</script>
+	<script>
+
+			$('.skill_priotity_icon img').on("mousemove", function () {
+				$(this).parent('.skill_priotity_icon').addClass('layout')
+			})
+			$('.skill_priotity_icon img').on("mouseout", function () {
+				$(this).parent('.skill_priotity_icon').removeClass('layout')
+			})
+	</script>
+
+
+</body>
+
+</html>

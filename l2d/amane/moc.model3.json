@@ -1,0 +1,118 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "moc.moc3",
+		"Textures": [
+			"textures/AmaneInori_texture_00.png"
+		],
+		"Physics": "moc.physics3.json",
+		"Motions": {
+			"Idle": [
+				{
+					"File": "motions/CH_AmaneInori@Live2D_Greet_Sad1.motion3.json"
+				},
+				{
+					"File": "motions/CH_AmaneInori@Live2D_Insert03.motion3.json"
+				},
+				{
+					"File": "motions/CH_AmaneInori@Live2D_Insert04.motion3.json"
+				},
+				{
+					"File": "motions/CH_AmaneInori@Live2D_Insert05.motion3.json"
+				},
+				{
+					"File": "motions/CH_AmaneInori@Live2D_Terrified_loop.motion3.json"
+				},
+				{
+					"File": "motions/CH_AmaneInori@Live2D_Wordless_loop.motion3.json"
+				},
+				{
+					"File": "motions/CH_AmaneInori@Live2D_Shy_Complete.motion3.json"
+				}
+			],
+			"TapBra": [
+				{
+					"File": "motions/CH_AmaneInori@Live2D_TCH1_Bra.motion3.json",
+					"Sound": "sounds/AmaneInori_Touch_Breast_01.wav"
+				},
+				{
+					"File": "motions/CH_AmaneInori@Live2D_TCH2_Bra.motion3.json",
+					"Sound": "sounds/AmaneInori_Touch_Breast_02.wav"
+				}
+			],
+			"TapHand": [
+				{
+					"File": "motions/CH_AmaneInori@Live2D_TCH1_Hand.motion3.json",
+					"Sound": "sounds/AmaneInori_Touch_Hand_01.wav"
+				},
+				{
+					"File": "motions/CH_AmaneInori@Live2D_TCH2_Hand.motion3.json",
+					"Sound": "sounds/AmaneInori_Touch_Hand_02.wav"
+				}
+			],
+			"TapHead": [
+				{
+					"File": "motions/CH_AmaneInori@Live2D_TCH1_Head.motion3.json",
+					"Sound": "sounds/AmaneInori_Touch_Head_01.wav"
+				},
+				{
+					"File": "motions/CH_AmaneInori@Live2D_TCH2_Head.motion3.json",
+					"Sound": "sounds/AmaneInori_Touch_Head_02.wav"
+				},
+				{
+					"File": "motions/CH_AmaneInori@Live2D_TCH3_Head.motion3.json",
+					"Sound": "sounds/AmaneInori_Touch_Head_03.wav"
+				}
+			],
+			"TapHip": [
+				{
+					"File": "motions/CH_AmaneInori@Live2D_TCH1_Hip.motion3.json",
+					"Sound": "sounds/AmaneInori_Touch_Hip_01.wav"
+				},
+				{
+					"File": "motions/CH_AmaneInori@Live2D_TCH2_Hip.motion3.json",
+					"Sound": "sounds/AmaneInori_Touch_Hip_02.wav"
+				}
+			]
+		}
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": [
+				"ParamMouthOpenY"
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
+			]
+		}
+	],
+	"HitAreas": [
+		{
+			"Id": "DREFTouchBoxHandL",
+			"Name": "HandL"
+		},
+		{
+			"Id": "DREFTouchBoxHandR",
+			"Name": "HandR"
+		},
+		{
+			"Id": "DREFTouchBoxHead",
+			"Name": "Head"
+		},
+		{
+			"Id": "DREFTouchBoxBra",
+			"Name": "Bra"
+		},
+		{
+			"Id": "DREFTouchBoxHip",
+			"Name": "Hip"
+		}
+	]
+}
